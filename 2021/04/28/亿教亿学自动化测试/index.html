@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/WEB-API/">
-                                <span class="chip bg-color">WEB API</span>
+                            <a href="/tags/API/">
+                                <span class="chip bg-color">API</span>
                             </a>
                         
                     </div>
@@ -468,7 +468,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="亿教亿学-在线教育系统"><a href="#亿教亿学-在线教育系统" class="headerlink" title="亿教亿学 在线教育系统"></a>亿教亿学 在线教育系统</h1><h3 id="一、项目介绍"><a href="#一、项目介绍" class="headerlink" title="一、项目介绍"></a>一、项目介绍</h3><p>亿教亿学  一款在线教育产品 主打中小学生在线教学。老师可以在线授课，批改作业。支持数据统计分析功能。</p>
+                <h1 id="亿教亿学-在线教育系统-第一阶段"><a href="#亿教亿学-在线教育系统-第一阶段" class="headerlink" title="亿教亿学 在线教育系统    第一阶段"></a>亿教亿学 在线教育系统    第一阶段</h1><h3 id="一、项目介绍"><a href="#一、项目介绍" class="headerlink" title="一、项目介绍"></a>一、项目介绍</h3><p>亿教亿学  一款在线教育产品 主打中小学生在线教学。老师可以在线授课，批改作业。支持数据统计分析功能。</p>
 <p>WEB与APP端均支持。</p>
 <h3 id="二、系统主要功能"><a href="#二、系统主要功能" class="headerlink" title="二、系统主要功能"></a>二、系统主要功能</h3><ol>
 <li><p>在线微课、作业</p>
@@ -490,32 +490,43 @@
 <li>学校管理</li>
 <li>公告管理</li>
 </ol>
-<h3 id="四、第三方学校管理API接口测试"><a href="#四、第三方学校管理API接口测试" class="headerlink" title="四、第三方学校管理API接口测试"></a>四、第三方学校管理API接口测试</h3><h4 id="1-说明"><a href="#1-说明" class="headerlink" title="1.说明"></a>1.说明</h4><p>​    本接口是REST API接口， 用于第三方教育机构在YJ平台进行学校管理操作。每个授权的第三方教育机构在 YJ平台中都会生成一个对应的学校对象。</p>
-<p>​    使用本接口时，所有的API请求必须带上vcode参数。 </p>
-<p>​    该参数是为该学校分配的一个验证码，必须私密保存，不能外泄。</p>
-<h4 id="2-测试点"><a href="#2-测试点" class="headerlink" title="2.测试点"></a>2.测试点</h4><ul>
-<li>班级操作<ul>
-<li>列出班级</li>
-<li>添加班级</li>
-<li>修改班级</li>
-<li>删除班级</li>
-</ul>
-</li>
-<li>老师操作<ul>
-<li>列出老师</li>
-<li>添加老师</li>
-<li>修改老师</li>
-<li>删除老师</li>
-</ul>
-</li>
-<li>学生操作<ul>
-<li>列出学生</li>
-<li>添加学生</li>
-<li>修改学生</li>
-<li>删除学生</li>
-</ul>
-</li>
-</ul>
+<h3 id="四、第三方学校管理API接口测试"><a href="#四、第三方学校管理API接口测试" class="headerlink" title="四、第三方学校管理API接口测试"></a>四、第三方学校管理API接口测试</h3><h4 id="1-说明"><a href="#1-说明" class="headerlink" title="1.说明"></a>1.说明</h4><p>​        本接口是REST API接口， 用于第三方教育机构在YJ平台进行学校管理操作。每个授权的第三方教育机构在 YJ平台中都会生成一个对应的学校对象。</p>
+<p>​        使用本接口时，所有的API请求必须带上vcode参数。 </p>
+<p>​        该参数是为该学校分配的一个验证码，必须私密保存，不能外泄。</p>
+<h4 id="2-测试点"><a href="#2-测试点" class="headerlink" title="2.测试点"></a>2.测试点</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">班级操作</th>
+<th align="center">老师操作</th>
+<th align="center">学生操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">测试点1</td>
+<td align="center">列出班级</td>
+<td align="center">列出老师</td>
+<td align="center">列出学生</td>
+</tr>
+<tr>
+<td align="center">测试点2</td>
+<td align="center">添加班级</td>
+<td align="center">添加老师</td>
+<td align="center">添加学生</td>
+</tr>
+<tr>
+<td align="center">测试点3</td>
+<td align="center">修改班级</td>
+<td align="center">修改老师</td>
+<td align="center">修改学生</td>
+</tr>
+<tr>
+<td align="center">测试点4</td>
+<td align="center">删除班级</td>
+<td align="center">删除老师</td>
+<td align="center">删除学生</td>
+</tr>
+</tbody></table>
 <p>以上没各功能点都有对应的HTTP请求格式、响应结果。</p>
 <h4 id="3-准备工具"><a href="#3-准备工具" class="headerlink" title="3.准备工具"></a>3.准备工具</h4><ol>
 <li>使用语言：Python3.8</li>
@@ -528,17 +539,16 @@
 <p>所以在 <code>需求整理</code> 过程中：</p>
 <ul>
 <li><p>寻找是否有遗漏的 需求点（测试点）</p>
-<p>​    有不少隐含 需求点（测试点） ，是需求文档中没有提到的，需要你自己找出来，或者 有的功能点 文档 只是一带而过，细节没有描述清楚，必须要搞清楚</p>
+<p>​        有不少隐含 需求点（测试点） ，是需求文档中没有提到的，需要你自己找出来，或者 有的功能点 文档 只是一带而过，细节没有描述清楚，必须要搞清楚</p>
 </li>
 <li><p>发现需求设计 有 矛盾错误的地方，及时和 产品组、开发人员 沟通</p>
 </li>
 <li><p>不断的将需求进行 合理的 分类、组合， 记录在你自己的测试需求文档中</p>
-<p>​    需求文档中，功能的分类组织的形式，并不一定是最好的，甚至可能是不正确的，测试人员需要根据自己的经验重新组织</p>
-<p>而且，我们需要把前面发现 开发人员给的需求设计文档中 的 遗漏、细节不清楚的地方 在自己的 测试需求文档中记录下来。</p>
-<p>​    最终的 测试需求文档，就是做为 测试用例 的输入材料。</p>
+<p>​        需求文档中，功能的分类组织的形式，并不一定是最好的，甚至可能是不正确的，测试人员需要根据自己的经验重新组织</p>
+<p>而且，我们需要把前面发现 开发人员给的需求设计文档中 的 遗漏、细节不清楚的地方 在自己的 测试需求文档中记录下来。最终的 测试需求文档，就是做为 测试用例 的输入材料。</p>
 </li>
 </ul>
-<ol start="2">
+</li>
 <li><p>编写测试用例</p>
 <p>需求整理好以后，采用什么方法才能写出比较完善的测试用例呢？</p>
 <p>网上流传的编写测试用例方法有很多，我认为最重要的就是</p>
@@ -549,9 +559,32 @@
 <li>因素/场景组合法</li>
 </ul>
 </li>
-<li><p>引入自动化测试</p>
+<li><p>接口手工测试</p>
+<p>​        根据接口测试用例文档，先进行 <code>手工测试</code></p>
+<p>​        这里我自己<code>开发</code>测试工具， 使用<code>Python</code>和<code>requests</code>库， 发送和接收 测试用例中 的API接口消息。然后人工检查是否用例里面的预期结果相符。</p>
+<p>​        为什么自己开发测试工具？有现成的postman等工具啊？</p>
+<p>​        这是因为我们的测试接口里面，有一些特殊加密接口数据。因为Postman的编码是用JS编的，找不到对应的库。但是有现成的<code>python</code>库可以直接调用，然后我就自己开发了测试工具。而且自己开发测试工具更测试工作，用时也并不长。</p>
+<p>​        发送接收API消息封装到库中</p>
+<p>​        把 发送接收API消息封装到库中，这样可以使我们的测试代码更加简洁，复用性更高。也方便以后的自动化测试</p>
+<p>​        </p>
 </li>
-</ol>
+<li><p>接口自动化测试</p>
+<p>我们要自动化测试，必须把用例的所有步骤全部自动化实现。</p>
+<p>这包括，用程序实现 ：</p>
+<ul>
+<li><p>预置条件中数据环境的构建</p>
+</li>
+<li><p>测试步骤中的测试动作，比如 发送HTTP消息给被测系统</p>
+</li>
+<li><p>预期结果中的检查，比如 对返回HTTP响应消息中 数据的检查</p>
+</li>
+</ul>
+<p>自动化测试系统的开发，需要挑选一款合适的框架，这里我用 基于<code>pytest</code>改进研发的测试框架<code>hytest</code></p>
+<p>我们要记住的重点是：</p>
+<ul>
+<li>自动化用例的目录结构，最好 <code>按照 数据环境 规划</code></li>
+<li>下层目录会继承上层目录的 数据环境</li>
+</ul>
 </li>
 </ol>
 
@@ -618,8 +651,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/WEB-API/">
-                                    <span class="chip bg-color">WEB API</span>
+                                <a href="/tags/API/">
+                                    <span class="chip bg-color">API</span>
                                 </a>
                             
                         </div>
@@ -827,8 +860,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/WEB-API/">
-                        <span class="chip bg-color">WEB API</span>
+                    <a href="/tags/API/">
+                        <span class="chip bg-color">API</span>
                     </a>
                     
                 </div>
@@ -873,8 +906,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/WEB-API/">
-                        <span class="chip bg-color">WEB API</span>
+                    <a href="/tags/API/">
+                        <span class="chip bg-color">API</span>
                     </a>
                     
                 </div>
