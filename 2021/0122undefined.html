@@ -1,0 +1,2222 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Linux, Jnblog">
+    <meta name="description" content="也许你错过了上一站的美好，才遇见了下一站的惊喜。面对复杂，保持欢喜。加油，别让人生输给心情">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Linux | Jnblog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Jnblog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Jnblog</div>
+        <div class="logo-desc">
+            
+            也许你错过了上一站的美好，才遇见了下一站的惊喜。面对复杂，保持欢喜。加油，别让人生输给心情
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/JNan-QQ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/JNan-QQ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Linux</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-22
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h2><p>Linux 就是一个操作系统， 和大家熟悉的 Windows 一样。</p>
+<p>所以我们要使用它，就需要先安装到电脑上。</p>
+<p>你可以安装在一台单独的电脑上， 也可以安装在虚拟机里面。</p>
+<p>虚拟机，就是在你的电脑上用软件模拟的电脑（是的，软件可以模拟硬件的运行环境， 比如你在电脑上玩过街机游戏吗？这些就是电脑软件模拟的街机硬件，运行街机游戏），这样你就可以在模拟的电脑里面 安装其他的操作系统， 比如Linux。</p>
+<p>这样我们就在一个程序窗口里面运行另外一个操作系统了。</p>
+<p>Windows操作系统有 Windows 7 、Windows 10、 Windows server 2016 等等众多的版本。</p>
+<p>Linux 版本更多，比如 Ubuntu、RedHat、CentOS、Debian、Fedora等，这些都是Linux系统的不同发行版本.</p>
+<p>服务器开发使用 CentOS 比较多，我们教程就以 Centos 为例讲解如何安装。</p>
+<p>运行虚拟机软件的操作系统 我们称之为 <code>host操作系统</code>， 虚拟机 软件里面的操作系统称之为 <code>guest操作系统</code></p>
+<p>本文中的 host 操作系统是 Windows 10 ， 而 guest 操作系统是 CentOS7</p>
+<p>虚拟机安装 CentOS 分为两步</p>
+<ul>
+<li>创建虚拟机（就是虚拟电脑）</li>
+<li>在虚拟机上安装 CentOS 操作系统</li>
+</ul>
+<p>在虚拟机安装CentOS，大家需要下载 CentOS的安装光盘镜像文件。</p>
+<p>在国外下载比较慢，推荐到网易的镜像站点下载</p>
+<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/centos/">点击这里访问网易镜像站点</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/272024481">linux系统怎么安装？ - 知乎 (zhihu.com)</a></p>
+<h3 id="登录操作"><a href="#登录操作" class="headerlink" title="登录操作"></a>登录操作</h3><p>Linux 是支持多用户的操作系统，什么叫多用户操作系统？</p>
+<p>就是说，多个人都可以使用安装了Linux的同一台电脑。 其中有管理员用户（比如安装过程中就输入密码的那个root用户），普通用户。</p>
+<p>不同的人有不同的权限，所以我们需要在Linux操作系统上创建多个账号给他们使用，对应不同的权限。</p>
+<p>所以用户使用系统前必须先输入用户名密码登录，这样Linux才知道你是哪个用户。</p>
+<p>Linux用户可以有如下两种登录方式：</p>
+<ul>
+<li>Linux主机直接登录</li>
+<li>在另一台电脑远程登录</li>
+</ul>
+<h3 id="注销（退出Linux系统）"><a href="#注销（退出Linux系统）" class="headerlink" title="注销（退出Linux系统）"></a>注销（退出Linux系统）</h3><p>在每次使用完后，一定要进行注销（或者说退出），以防他人通过你的帐号进入系统。</p>
+<p>在Linux提示符下，运行exit命令，即可退出本次登录</p>
+<p>或直接按组合键 <code>Ctrl+d</code> 。</p>
+<h3 id="关机与重启"><a href="#关机与重启" class="headerlink" title="关机与重启"></a>关机与重启</h3><p>Linux主机的关机方法为：</p>
+<p>root用户登录后，输入命令 poweroff 表示立即关机。</p>
+<p>Linux主机的重启方法为：</p>
+<p>root用户登录后，输入命令 reboot 表示立即关机。</p>
+<h2 id="文本编辑"><a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h2><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>执行vi abc.txt 文件名 命令，就打开了vi去编辑文件abc.txt，默认进入的就是命令模式</p>
+<p>在该模式下，不可以输入文字，那干什么呢？</p>
+<p>那命令模式下面我们通常可以干什么呢？</p>
+<p>首先就是移动光标</p>
+<pre><code class="java">键盘h键 － 光标左移一个字符
+键盘j键 － 光标下移一个字符
+键盘k键 － 光标上移一个字符
+键盘l键 － 光标右移一个字符
+</code></pre>
+<p>当然 也可以通过键盘 <code>方向键</code> 来移动光标位置。</p>
+<p>另外还支持下面的按键操作</p>
+<pre><code class="java">按0或^ － 光标移动到所在行的行首
+按$    － 光标移动到所在行的行尾
+输入gg － 把光标移到文件开始位置
+输入G  － 把光标移到文件末尾
+输入Ctrl + f  －  往下翻一页
+输入Ctrl + b  －  往上翻一页
+</code></pre>
+<p>删除文字也是我们常做的操作</p>
+<pre><code class="java">按x  － 删除光标所在字符
+按dd － 删除光标所在行
+按dw － 删除光标所在处到词尾的内容
+按d$ － 删除光标所在处到行尾的内容
+</code></pre>
+<p>另外，还有下面这些操作</p>
+<pre><code class="py">按yy – 复制光标所在的行
+按p – 黏贴
+按v，然后移动光标，可以选择内容，再按y复制选中的内容
+按u – 撤销刚才所做的操作
+按Ctrl+r – 重做被撤销当前所做的操作
+按. – 重复刚才所做的操作
+</code></pre>
+<p>可能大家也发现了，上面说的命令模式下面的操作，都不可以直接输入文字到文件中。</p>
+<p>要输入文字，就必须 切换到插入模式。</p>
+<p>怎么切换到插入模式呢？</p>
+<p>从命令模式进入插入模式的方式有：</p>
+<pre><code class="py">按a－将在光标所在位置之后插入文本（append）
+按i－将在光标所在位置之前插入文本(insert)
+按o－将在光标所在行之后插入一新行
+</code></pre>
+<p>进入到插入模式，就可以输入文字了。</p>
+<h3 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h3><p>插入模式是用来让 用户进行文件内容的输入的。</p>
+<p>用户刚进入vi是命令模式， 想敲字符输入内容是不行的。必须进入插入模式，你才能输入字符。</p>
+<p>在插入模式下，可以通过键盘方向键，来移动光标。</p>
+<p>但是不能再 通过 ghjk 来移动光标了，因为现在你按这些按键就是输入对应的字符了。</p>
+<p>在插入模式下，编辑文件的过程中，你经常需要切换回 命令模式，来删除字符、删除行，跳到上一页，到最后一行等等。</p>
+<p>所以，我们使用vi，会非常频繁的在插入模式 和 命令模式之间切换， 大家要熟悉这种切换。</p>
+<p>从插入模式切换到命令模式，就是输入按键 Esc，就是键盘左上角的那个按键。</p>
+<h3 id="底行模式"><a href="#底行模式" class="headerlink" title="底行模式"></a>底行模式</h3><p>所谓 底行模式，就是在屏幕底部打开命令行，用来输入命令。</p>
+<p>底行模式 主要是 输入命令 来 保存文件 或 退出vi程序、寻找字符串、列出行号等</p>
+<p>注意：我们只能从命令模式进入底行模式。</p>
+<p>所以，如果你现在是处于插入模式，必须先按Esc键进入命令模式后，再按冒号 <code>：</code> 或 <code>/</code> 进入底行模式。</p>
+<p>底线模式常用操作有如下这些：</p>
+<p><code>:wq</code> 保存文件并退出</p>
+<p><code>:q</code> 不保存文件，并退出，如果文件做了修改，但有不想保存，需要用:q!</p>
+<p><code>:q!</code> 不保存文件，强制退出</p>
+<p><code>:w</code> 只保存文件，但是不退出vi，可以切换到输入模式下面继续编辑文件</p>
+<p><code>:set nu</code> 显示行号</p>
+<p><code>/abc</code> 在文件中查找abc字符。按 <code>n</code> 不停的往下查找，按 <code>N</code> 往上查找</p>
+<p><code>:1,$s/string/replace/g</code> 替换功能，把文件中的string,替换为replace 按Esc键，切换到命令模式</p>
+<h2 id="目录和文件操作"><a href="#目录和文件操作" class="headerlink" title="目录和文件操作"></a>目录和文件操作</h2><h3 id="当前工作目录"><a href="#当前工作目录" class="headerlink" title="当前工作目录"></a>当前工作目录</h3><p>我们在命令行里执行命令的时候，都有一个 <code>当前目录（也叫工作目录）</code> ，就是我们所在的目录。</p>
+<p>当用户刚登录系统时，当前工作目录是用户的 <code>home目录</code> 。</p>
+<p>root用户的home目录，是 <code>/root</code></p>
+<p>其他用户home目录，是在创建用户的时候 产生的，一般是 <code>/home/用户名</code></p>
+<p>比如你是用户 jn，home目录通常就是是 /home/jn。</p>
+<p>当前目录下面的所有文件都可以直接访问， 假设当前目录 下面有个文件 a.txt。 要用vi编辑它，就可以直接执行vi a.txt</p>
+<p><code>查看当前目录使用命令 pwd</code> ，比如</p>
+<pre><code>[root@izbqz ~]# pwd
+/root/package
+</code></pre>
+<p>改变当前目录用命令 <code>cd</code> 。</p>
+<p>比如，</p>
+<p>改变当前目录为package目录（这个动作也称之为进入到package目录）， 就执行命令 <code>cd package</code></p>
+<p>改变当前路径到根目录 就执行命令 <code>cd /</code></p>
+<h4 id="绝对路径与相对路径"><a href="#绝对路径与相对路径" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h4><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/5862.html">Linux绝对路径和相对路径详解 (biancheng.net)</a></p>
+<p>我们命令行要操作一个文件（或者目录），必须给出这个文件的路径。路径分为：</p>
+<p>● 绝对路径： 绝对路径 开始于根目录，沿着目录层级，一直到达所期望的目录或文件。</p>
+<p>比如下图</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_57497214-51747f80-7309-11e9-862f-11d235f43e84.png" alt="image"></p>
+<p>其 中的 photos（假设它是个目录） 的绝对路径 就是 <code>/home/jono/photos</code></p>
+<p>我们要进入到 photos这个目录，就执行命令 <code>cd /home/jono/photos</code></p>
+<p>● 相对路径：</p>
+<p>相对路径相对的是 当前目录。</p>
+<p>在使用相对路径的过程中， 经常用到一对特殊符号 <code>.</code> (点) 和 <code>..</code> (两个点)。</p>
+<p>符号 <code>.</code> 指的是当前目录，<code>..</code> 指的是当前目录的父目录。</p>
+<p>根据上面的图，假如当前目录为 jono ，如果要用相对路径切换到photos,就这样写 <code>cd ./photos</code> ，也可以直接写 <code>cd photos</code> ，</p>
+<p>假如当前目录为 cory ，如果要用相对路径切换到 photos,就这样写 <code>cd ../jono/photos</code> 。其中 两个点 <code>..</code> 表示上级目录。当然也可以使用绝对路径 <code>cd /home/jono/photos</code></p>
+<h3 id="查看目录和文件"><a href="#查看目录和文件" class="headerlink" title="查看目录和文件"></a>查看目录和文件</h3><p>查看目录内容 或者某个文件的属性 使用命令 <code>ls</code></p>
+<p>ls 可能是用户最常使用的命令。通过它，我们可以知道目录里面包含的内容，也可以知道 文件和目录的 属性。</p>
+<p>只要简单的输入 ls 就能看到 当前目录下所包含的文件和子目录列表。</p>
+<p>除了当前工作目录以外，也可以指定要列出内容的目录，就像这样：</p>
+<pre><code class="py">[root@iztqz ~]# ls /home/jn/
+jn.txt  frontend
+</code></pre>
+<hr>
+<p>我们经常使用 ls 命令的“-l”选项，这样可以显示出更多的信息：</p>
+<pre><code class="py">[jn@iztqz ~]$ ls -l
+total 8
+-rw-rw-r-- 1 jn jn   13 May 10 10:36 jn.txt
+drwxrwxr-x 2 jn jn 4096 Apr 17 11:55 frontend
+</code></pre>
+<p>各个字段的含义如下：</p>
+<p><code>-rw-r--r--</code> 文件的访问权限。第一个字符指明文件类型。在不同类型之间， 开头的“－”说明是一个普通文件，“d”表明是一个目录。其后三个字符是文件所有者的 访问权限，再其后的三个字符是文件所属组中成员的访问权限，最后三个字符是其他人的访问权限。这个字段的含义在后面用户权限那一章会详细讲解。</p>
+<p><code>1</code> 文件的硬链接数目。</p>
+<p><code>jn</code> 文件所有者的用户名。</p>
+<p><code>jn</code> 文件所属用户组的名字。</p>
+<p><code>82</code> 以字节数表示的文件大小。</p>
+<p><code>May 10 10:36</code> 上次修改文件的时间和日期。</p>
+<p><code>jn.txt</code> 文件名。</p>
+<h4 id="查看文本文件内容"><a href="#查看文本文件内容" class="headerlink" title="查看文本文件内容"></a>查看文本文件内容</h4><p>查看文本文件的内容除了我们之前提到过的用vi编辑器外，对于比较短的文件， 可以直接用命令cat将文件的内容显示到屏幕上。</p>
+<p>比如</p>
+<pre><code class="py">[jn@izbp16hara3tw8kbagjotqz ~]$ cat jn.txt
+jn testing
+</code></pre>
+<p>说明jn.txt 的文件内容就是 一行 <code>jn jning</code></p>
+<h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>mkdir 命令是用来创建目录的。</p>
+<p>例如</p>
+<pre><code>mkdir jn1
+</code></pre>
+<p>会在当前目录下，创建一个名为”jn1”的目录，而</p>
+<pre><code>mkdir jn1 jn2 jn3
+</code></pre>
+<p>会创建三个目录，名为 jn1, jn2, jn3。</p>
+<p>如果我们要创建好几层的目录，比如 /root/jn/python/lesson1,</p>
+<p>直接这样写命令 <code>mkdir /root/jn/python/lesson1</code></p>
+<p>shell 会报错，因为系统中可能还 没有 /root/jn/python 这个目录。</p>
+<p>一种方法是：我们 依次 创建 每一级目录， 像这样</p>
+<pre><code class="py">mkdir /root/jn
+mkdir /root/jn/python
+mkdir /root/jn/python/lesson1
+</code></pre>
+<p>更简单的方法是，使用参数 -p</p>
+<pre><code class="py">mkdir -p /root/jn/python/lesson1
+</code></pre>
+<h3 id="删除文件和目录"><a href="#删除文件和目录" class="headerlink" title="删除文件和目录"></a>删除文件和目录</h3><p>rm 命令用来 删除 文件和目录。</p>
+<p>rm 命令后面 直接加上要删除的文件，比如</p>
+<pre><code class="py">rm file1 file2
+</code></pre>
+<p>当我们要删除目录的时候 ，需要加上 -r 选项，否则会报错，如下所示</p>
+<pre><code class="py">$ rm dir1
+rm: cannot remove &#39;dir1&#39;: Is a directory
+</code></pre>
+<p>要这样写</p>
+<pre><code class="py">$ rm -r dir1
+</code></pre>
+<p>-r 参数 也可以详细的写成 –recursive 。 它表示要 递归地删除文件。 这意味着，如果要删除一个目录，而此目录 又包含子目录，那么子目录也会被删除。</p>
+<p>通常 -r 和 -f 参数会一起使用。</p>
+<p>-f 参数 也可以详细的写成–force 。 它表示忽视不存在的文件，不显示提示信息。</p>
+<p>比如：</p>
+<pre><code class="py">rm -rf file1 dir1 file2 dir2
+</code></pre>
+<p>如果文件 file1，或目录 dir1 不存在的话，rm 仍会继续执行，不会报错</p>
+<p>执行 rm 操作 要非常小心， rm 不像Windows里面有回收站，一旦你用 rm 删除了一些东西，想再恢复是相当的麻烦的。</p>
+<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><p>当前目录下有这样一些文件</p>
+<pre><code class="py">jn1.txt  file1.jpg  file2.jpg  file3.jpg  
+file5.jpg  hy2.jpg   hyjn.jpg  
+</code></pre>
+<p>我们要删除 其中 所有 以file开头， 扩展名为 .jpg 的文件，怎么办？</p>
+<p>当然可以</p>
+<pre><code class="py">rm -f file1.jpg  file2.jpg  file3.jpg file5.jpg
+</code></pre>
+<p>但是如果 这样的文件有上百个， 敲起来是非常麻烦的。</p>
+<p>Linux 提供了一组特殊字符来匹配 文件名中的各部分内容。</p>
+<p>这些特殊字符叫做 <code>通配符</code> 。</p>
+<p>上面的例子，我们可以这样写</p>
+<pre><code class="py">rm -f  file*.jpg
+</code></pre>
+<ul>
+<li>匹配任意多个字符（包括零个或一个）， 这样是不是，方便多了？</li>
+</ul>
+<p>常用的通配符有下面：</p>
+<p><code>*</code> 匹配任意 <code>多个</code> 字符（包括零个或一个）</p>
+<p><code>?</code> 匹配任意 <code>一个</code> 字符（不包括零个）</p>
+<p><code>[abcd]</code> 匹配abcd中任意一个字符</p>
+<p>下面是一些示例的用法</p>
+<p><code>*</code> 表示 所有文件（或目录）</p>
+<p><code>jn*</code> 表示 文件名以“jn”开头的文件（或目录）</p>
+<p><code>jn*.py</code> 表示 以”jn”开头，中间有任意多个字符，并以”.py”结尾的文件（或目录）</p>
+<p><code>jn????</code> 表示 以“jn”开头，其后紧接着 <code>4个字符</code> 的文件（或目录）</p>
+<p><code>[jnh]*</code> 表示 文件名以”b”,“y”,或”h”开头的文件（或目录）</p>
+<p><code>jn[0-9][0-9]</code> 表示 以”jn”开头，并紧接着2个数字的文件（或目录）</p>
+<p>很多 Linux命令，只要它们使用的参数是文件名，都可以使用通配符， 比如 <code>ls、cp、rm、mv </code>等等</p>
+<p>大家要注意：rm命令时，使用通配符特别要小心。 </p>
+<p>比如，你想删除一个目录中的所有 jpg 文件。你应该这样写 <code>rm *.jpg</code></p>
+<p>如果你不小心在 “*” 和 “.jpg” 之间多输入了一个空格，就像这样： <code>rm * .jpg</code></p>
+<p>这个 rm 命令会删除目录中的所有文件，还会提示没有文件叫做 “.jpg”。</p>
+<h3 id="复制文件和目录"><a href="#复制文件和目录" class="headerlink" title="复制文件和目录"></a>复制文件和目录</h3><p>cp 命令， 用来 复制文件或者目录。</p>
+<p>假设 jn1 是一个文件，我们可以 这样</p>
+<pre><code class="py">cp jn1 jn2
+</code></pre>
+<p>如果 jn2 这个文件 不存在， 上面的命令会创建一个新文件 jn2 ，并且把 jn1内容 拷贝到jn2中。</p>
+<p>如果 jn2 已经存在了， 上面的命令会直接把 jn1内容 拷贝到jn2中， 就是说会覆盖jn2 原来的内容。</p>
+<p>如果我们要拷贝的是一个目录， 则 需要加上 -r 选项</p>
+<p>比如</p>
+<pre><code class="py">cp -r  frontend frontend2
+</code></pre>
+<p>指定 -r 或者 –recursive 会递归地复制目录及目录中的内容。就是说，如果 frontend 里面有好多级子目录和文件，全部都会被拷贝过去。</p>
+<p>可以拷贝 文件或者目录到 另外一个目录中，比如</p>
+<p><code>cp -r file1 dir1 dir2</code> 就是复制文件 file1 和 目录dir1 到目录 dir2中。目录 dir2 必须存在。</p>
+<p>再比如 <code>cp dir1/* dir2</code> 这里使用通配符，可以把目录 dir1 中的所有文件都 复制到目录 dir2 中。 dir2 必须已经存在。</p>
+<h3 id="移动文件目录、重命名文件目录"><a href="#移动文件目录、重命名文件目录" class="headerlink" title="移动文件目录、重命名文件目录"></a>移动文件目录、重命名文件目录</h3><p>mv 命令可以 <code>移动</code> 文件或者目录， 也可以 <code>重命名</code> 文件或者目录</p>
+<p>mv 使用方法与 cp 很相像。</p>
+<p>假设 jn1 是一个文件，我们可以 这样</p>
+<pre><code class="py">mv jn1 jn2
+</code></pre>
+<p>如果 jn2 这个文件 不存在， 上面的命令会 把文件 jn1 改名为 jn2 ，并且把 jn1内容 拷贝到jn2中。</p>
+<p>如果 jn2 已经存在了， 上面的命令会把文件 jn1 改名为 jn2， 等于删除了原来的 jn2。</p>
+<p>假设 dir1 是一个目录，我们可以执行</p>
+<pre><code class="py">mv  dir1 dir2
+</code></pre>
+<p>如果目录 dir2 不存在，就会把 dir1目录 改名为 dir2。</p>
+<p>如果目录 dir2 存在，就会把 dir1（及它的内容）到目录 dir2。</p>
+<p>假设 jn1 是一个文件，dir1 是一个目录，我们可以执行</p>
+<pre><code class="py">mv  jn1 dir1 dir2
+</code></pre>
+<p>这样写的话， 如果目录 dir2 必须存在，就会 移动文件 jn1 和 目录 dir1（及它的内容）到目录 dir2。</p>
+<h3 id="在文件中查找字符串"><a href="#在文件中查找字符串" class="headerlink" title="在文件中查找字符串"></a>在文件中查找字符串</h3><p>在 Linux 操作过程中，经常需要在一个文本文件中 查询包含特定关键字的那些行的信息。</p>
+<p>比如，我们需要在 日志文件 django.log 中查看所有包含了 Error 关键字的行。</p>
+<p>当然，我们可以使用vi打开这个文件，然后再底行模式输入 <code>/Error</code> 查看。</p>
+<p>更快捷的方式，就是直接 使用 grep命令</p>
+<p>比如</p>
+<pre><code>$ grep Error django.log
+1130_15:57:28 Internal Server Error: /api/cust/pages
+    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+1130_16:00:20 Internal Server Error: /api/cust/pages
+    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+1130_16:08:38 Internal Server Error: /api/cust/pages
+    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+</code></pre>
+<p>如果你想同时显示 各行的行号，可以加上参数 -n</p>
+<p>比如</p>
+<pre><code>$ grep Error django.log -n
+1:1130_15:57:28 Internal Server Error: /api/cust/pages
+18:    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+19:jwt.exceptions.ExpiredSignatureError: Signature has expired
+20:1130_16:00:20 Internal Server Error: /api/cust/pages
+37:    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+38:jwt.exceptions.ExpiredSignatureError: Signature has expired
+39:1130_16:08:38 Internal Server Error: /api/cust/pages
+56:    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
+57:jwt.exceptions.ExpiredSignatureError: Signature has expired
+</code></pre>
+<p>如果你要查找的不仅仅是Error 这样的 一个单词，而是一段句子，比如 要找 <code>Internal Server Error</code></p>
+<p>就需要使用双引号，这样写</p>
+<pre><code>$ grep &quot;Internal Server Error&quot; django.log -n
+1:1130_15:57:28 Internal Server Error: /api/cust/pages
+20:1130_16:00:20 Internal Server Error: /api/cust/pages
+39:1130_16:08:38 Internal Server Error: /api/cust/pages
+58:1130_16:09:16 Internal Server Error: /api/cust/pages
+</code></pre>
+<h2 id="用户管理和文件权限"><a href="#用户管理和文件权限" class="headerlink" title="用户管理和文件权限"></a>用户管理和文件权限</h2><h3 id="用户和用户组"><a href="#用户和用户组" class="headerlink" title="用户和用户组"></a>用户和用户组</h3><p>Linux系统是一个 <code>多用户</code> 的操作系统，任何一个用户，要使用系统，都必须使用Linux账号登陆系统。</p>
+<p>Linux账号是向系统管理员申请创建的。</p>
+<p>系统管理员可以为不同用户的账号分配不同的权限，从而控制他们对系统资源的访问。</p>
+<p>Linux系统中，每个用户账号 都对应一个 用户 ID。</p>
+<p>用户ID 就是一个数字，因为计算机处理数字更加方便。</p>
+<p>用户的 ID 与账号的信息就存储在文件 /etc/passwd 当中。</p>
+<p>另外 每个用户都属于一个 <code>用户组</code> ，每个用户组对应一个 <code>GroupID</code> 。</p>
+<p>系统管理员可以对一个用户组中的所有用户进行统一管理，比如分配权限等。</p>
+<p>用户组 ID 的信息就存储在文件 /etc/group 当中</p>
+<h3 id="root用户"><a href="#root用户" class="headerlink" title="root用户"></a>root用户</h3><p>Linux 系统有个特殊的用户 <code>root</code> 。 该使用该用户账号的 就是 系统管理员。root用户是系统安装好就有的，具有系统中最高的权限。</p>
+<p><code>有的LINUX服务器创建好后root无密码</code></p>
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>Linux系统中创建用户，可以使用命令 <code>useradd</code></p>
+<p>比如：</p>
+<pre><code>[root@localhost ~]# useradd jn
+</code></pre>
+<p>这样</p>
+<ul>
+<li><p>就添加了一个用户jn</p>
+<p>使用命令 cat /etc/passwd 查看文件内容，你会发现在/etc/passwd文件末尾中新增了一行数据，如下所示</p>
+<pre><code>jn❌1000:1000::/home/jn:/bin/bash
+</code></pre>
+<p>/etc/passwd文件每行对应一个用户的信息。 一行中的字段用”:“隔开。每个字段的含义分别是</p>
+<pre><code>用户名
+登录密码 
+用户ID 
+用户Group ID
+描述信息
+用户的home目录
+该用户缺省shell
+</code></pre>
+</li>
+<li><p>该命令，同时也为该用户创建了一个用户组， 组名就叫 jn 。你会发现在 /etc/group 文件末尾中新增一行数据，如下所示</p>
+<pre><code>jn❌1000:
+</code></pre>
+<p><strong>当然，你可以创建用户的时候，就加入一个指定的组，而不是新建一个组，</strong><br><strong>比如 <code>useradd -g root jn</code> ，就在创建jnjn用户的同时，把它加入到 root 这个用户组里面了。</strong></p>
+</li>
+<li><p>另外还为该用户创建了一个 home目录（这里就是 /home/jn）， 该目录作为jn用户登录后使用的主目录，该目录属于jn用户所有。</p>
+<p>useradd可以使用 -d 参数指定该用户使用的 home目录</p>
+</li>
+</ul>
+<h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><p>添加用户后，还得用户设置密码。使用命令 <code>passwd</code></p>
+<pre><code class="py"># passwd jn
+Changing password for user jn.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+</code></pre>
+<p>passwd命令不仅仅可以给新建用户设置密码，也可以给老用户修改密码。</p>
+<p>但是，只有root用户才可以给其他用户设置密码，普通用户只能修改自己的密码。</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>使用命令 <code>userdel</code></p>
+<p>比如</p>
+<pre><code class="py">[root@bogon ~]# userdel jn
+</code></pre>
+<h3 id="用户间切换"><a href="#用户间切换" class="headerlink" title="用户间切换"></a>用户间切换</h3><p>假如说，你是系统管理员， 正使用root账号操作。</p>
+<p>现在你需要以jn账号进行一些操作， 可以从root用户切换到jn账号，</p>
+<p>切换账号使用命令 <code>su</code></p>
+<p>比如 <code>su - jn</code></p>
+<p>注意，其中有一个符号 - ， 切换命令中使用这个符号，表示要重新创建用户环境，就像使用jn账号重新登陆一样</p>
+<p>也可以不要符号 -，比如 <code>su jn</code> ，这样就会使用当前的用户root的环境（保留现有的环境变量），切换到新用户jn</p>
+<p>如果现有用户不是root 用户，切换到其他用户账号，需要输入密码， 如果是root用户则不需要输入密码。</p>
+<h3 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h3><p>增加一个新的用户组使用 <code>groupadd</code> 命令。</p>
+<p>比如：</p>
+<pre><code>groupadd jnusers
+</code></pre>
+<p>此命令向系统中增加了一个新组jnusers。</p>
+<h3 id="删除用户组"><a href="#删除用户组" class="headerlink" title="删除用户组"></a>删除用户组</h3><p>如果要删除一个已有的用户组，使用 <code>groupdel</code> 命令</p>
+<p>比如</p>
+<pre><code>groupdel jnusers
+</code></pre>
+<p>此命令从系统中删除组jnusers。</p>
+<h3 id="改变用户所属组"><a href="#改变用户所属组" class="headerlink" title="改变用户所属组"></a>改变用户所属组</h3><p>如果要将一个用户从组1改到组2，需要root用户使用 <code>usermod</code> 命令，其格式如下：</p>
+<p>例如：</p>
+<pre><code class="py">usermod –g g1 jn
+</code></pre>
+<p>此命令将用户jn转移至g1用户组中</p>
+<pre><code class="py">usermod –G g2,g3 jn
+</code></pre>
+<p>此命令将用户jn同时添加到g2，g3两个用户组中</p>
+<h3 id="Linux-文件访问权限"><a href="#Linux-文件访问权限" class="headerlink" title="Linux 文件访问权限"></a>Linux 文件访问权限</h3><p>Linux文件的访问有三种权限： 读（用字母r表示）、写（用字母w表示）、执行（用字母x表示）</p>
+<p>某个用户 对于一个 <code>文件</code> ：</p>
+<p>有读权限，表示该用户可以读取文件的内容，</p>
+<p>有写权限，表示该用户可以修改文件内容，</p>
+<p>有执行权限, 表示该用户可以运行该文件（当然该文件应该是可执行文件）</p>
+<p>而 这三种权限 对目录，含义又不一样。</p>
+<p>某个用户 对于一个 <code>目录</code> ：</p>
+<p>有读权限，表示该用户可以查看该目录里面的内容，</p>
+<p>有写权限，表示该用户可以在该目录里面 创建 和删除 文件，</p>
+<p>有执行权限, 表示该用户可以使用 cd命令，进入该目录</p>
+<p>对 某个文件或者目录，Linux系统需要说明 <code>三种类型的用户</code> ，分别具有怎样的权限</p>
+<p>这三种类型分别是：</p>
+<ul>
+<li>文件的所有者，英文叫 owner ， 也就是 该文件的 创建者</li>
+<li>文件所有者在的用户组里面的用户 ，英文叫 grouper，</li>
+<li>其他用户 (非owner和非grouper)</li>
+</ul>
+<p>Linux系统需要为每个文件和目录，指定这个三种类型的用户，具有什么r、w、x里面的哪些权限</p>
+<p>文件存取权限的显示 可以通过”ls -l”命令显示，如：</p>
+<p>$ ls -l file1</p>
+<p>显示如下：</p>
+<pre><code>$ ls -l mysql57-community.rpm
+-rwxr-xr--. 1 root root 9224 Sep 12  2016 mysql57-community.rpm
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>第2-4字符”rwx”表示此文件所有者root 对此文件的操作权限是为”可读、可写、可执行”,</li>
+<li>第5-7字符”r-x” 表示此工作组root内的用户对此文件的操作权限是”可读、不可写、可执行”，</li>
+<li>第8-10字符”r–” 表示其他用户对此文件的操作权限是”可读、不可写、不可执行”</li>
+</ul>
+<h3 id="修改文件访问权限"><a href="#修改文件访问权限" class="headerlink" title="修改文件访问权限"></a>修改文件访问权限</h3><p>文件的所有者或者root用户可以修改文件的访问权限</p>
+<p>用chmod命令修改文件的存取权限，chmod命令的格式如下：</p>
+<pre><code>chmod  [who][op][permission]  file...
+</code></pre>
+<p>who项表示用户类型，它的内容为以下一项或多项:</p>
+<pre><code class="py">u    拥有者(user --- owner)
+g    与拥有者同一组的用户(group)
+o    其他人(other)
+a    所有人(all)
+</code></pre>
+<p>op项表示动作:</p>
+<pre><code class="py">+    表示要加上permission指定的权利
+-    表示要取消permission指定的权利
+</code></pre>
+<p>permission项为存取权限，它的内容为以下一项或多项：</p>
+<pre><code class="py">r    表示可读
+w    表示可写
+x    表示可执行
+</code></pre>
+<p>比如：</p>
+<p><code>chmod u+w file1</code> ，该命令添加了 拥有者对file1文件的写权限</p>
+<p><code>chmod u-x file1 </code>，该命令去掉了 拥有者对file1文件的执行权限</p>
+<p><code>chmod ug+rwx file1</code> ，该命令添加了 拥有者和同组用户 对file1文件的 读、写、执行权限</p>
+<p><code>chmod a+rwx file1</code>，该命令添加了 所有人 对file1文件的 读、写、执行权限</p>
+<h3 id="改变文件所有者及文件所在组"><a href="#改变文件所有者及文件所在组" class="headerlink" title="改变文件所有者及文件所在组"></a>改变文件所有者及文件所在组</h3><p>chown将指定文件的拥有者改为指定的用户或组。</p>
+<p>该命令的参数中，用户可以是用户名或者用户ID；组可以是组名或者组ID。文件是以空格分开的要改变权限的文件列表，支持通配符。</p>
+<p>系统管理员经常使用chown命令，在将文件拷贝到另一个用户的名录下之后，让用户拥有使用该文件的权限.</p>
+<p>注意：必须是有root权限的用户才能改变文件所有者。</p>
+<p>改变文件所有者的命令格式如下:</p>
+<pre><code>chown [选项]... [所有者][:[组]] 文件...
+</code></pre>
+<p>例如：</p>
+<p><code>chown jn test1</code> ，就把文件test1的所有者变更为用户jn</p>
+<p><code>chown jn:jn test1</code> ，就把文件test1的所有者变更为用户jn，所属组变为jn</p>
+<p><code>chown -R jn dir1</code> ，就把目录dir1以及下面所有的子目录和文件的所有者变更为用户jn</p>
+<p>也可以用命令chgrp改变文件所有者组，格式如下:</p>
+<pre><code>chgrp [选项] [组] [文件]
+</code></pre>
+<p>注意：必须是有root权限的用户才能改变文件组别的归属{: .notice–info}</p>
+<p>比如:</p>
+<p><code>chgrp jn test1</code> ， 就把文件test1的用户组变更为组jn</p>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><h3 id="进程的概念"><a href="#进程的概念" class="headerlink" title="进程的概念"></a>进程的概念</h3><p>Linux系统中，进程也有PID。</p>
+<p>在Linux中，你正在运行的交互式命令行程序 Shell， 它就是一个进程。</p>
+<p>我们可以用命令 ps 查看进程信息的命令。</p>
+<pre><code>[jn@localhost ~]$ ps
+  PID TTY          TIME    CMD
+ 4786 pts/0    00:00:00   bash
+</code></pre>
+<p>如上所示，当前bash shell的 进程 PID 为 4786</p>
+<h3 id="进程的创建与查看"><a href="#进程的创建与查看" class="headerlink" title="进程的创建与查看"></a>进程的创建与查看</h3><p>Linux中，一个进程A里面可以创建出一个新的进程B，进程A就叫做进程B的 <code>父进程</code> (parent process)。</p>
+<p>进程B叫做进程A的子进程（child process）。</p>
+<p>最典型的例子，我们在shell中运行的程序（命令），都是shell进程创建的，所以shell进程就是他们的父进程。</p>
+<p>Linux中，主要是通过ps命令来查看进程信息的，我们运行命令ps -f ，结果如下所示</p>
+<pre><code>[jn@localhost ~]$ ps -f
+UID        PID  PPID  C STIME     TTY      TIME    CMD
+jn        4786  1780  0 06:45     pts/0    00:00:00  -bash
+jn        1865  4786  0 06:55     pts/0    00:00:00   ps –f
+</code></pre>
+<p>其中 PPID这一列就是该进程的父进程的PID。</p>
+<p>我们可以看出 ps 命令对应的进程的父进程PID为4786，正是bash进程的PID。</p>
+<p>下面列举了常用的 ps命令 的例子：</p>
+<p><code>ps</code> 显示和当前终端有关的进程信息</p>
+<p><code>ps -u jn</code> 显示jn用户所创建的进程信息</p>
+<p><code>ps -f</code> 详细显示每个进程信息</p>
+<p><code>ps -e</code> 显示所有正在运行的进程信息</p>
+<p><code>ps -ef</code> 显示当前系统所有的进程</p>
+<p><code>ps –ef|grep python</code> 查找python进程</p>
+<h3 id="进程的前台、后台转换"><a href="#进程的前台、后台转换" class="headerlink" title="进程的前台、后台转换"></a>进程的前台、后台转换</h3><p>Linux终端通过Shell程序来接收用户输入的命令，并且执行命令。</p>
+<p>我们在Shell里正在执行的，和用户进行人机交互的进程叫 <code>前台进程</code> (foreground process)</p>
+<p>前台进程可以接收键盘输入并将结果显示在显示器上。</p>
+<p>用户敲入什么命令，shell就会启动对应的程序，运行在 <code>前台</code> 。</p>
+<p>比如，大家可以用vi 编写一个 下面的Python程序到 Linux主机上，代码文件名可以为t1.py</p>
+<pre><code class="py">while True:    
+    info = raw_input(&quot;please input something:&quot;)
+    print(&quot;you input:%s\n\n&quot; % info)
+</code></pre>
+<p>然后使用命令 <code>python t1.py</code> 运行。</p>
+<p>可以发现及时这个 python 程序变成了前台进程，接收用户的输入。</p>
+<p>有些程序运行时，并不需要和用户进行交互，也就是说，不需要用户输入什么内容。 比如一个日志分析程序，一个定时清理磁盘文件的程序。</p>
+<p>比如，下面这样的一个Python程序 t2.py：</p>
+<pre><code class="py">import time
+
+while True:    
+    print(&quot;execute a task ...&quot;)
+    time.sleep(2)
+    print(&quot;done, wait for an hour to proceed...&quot;)
+    time.sleep(3600)
+</code></pre>
+<p>我们可以执行命令 <code>python t2.py</code> 运行它</p>
+<p>这样的程序，运行期间，如果在前台执行，我们只能等待它结束，不然我们没法执行下个程序。</p>
+<p>但是既然不需要用户输入信息，在前台执行，没有太大意义，我们应该要让它在 <code>后台</code> 执行。</p>
+<p>要让它在后台运行，启动时只需在命令行的最后加上“&amp;”符号。</p>
+<p>比如 <code>python t2.py &amp;</code></p>
+<p>后台运行的进程我们叫后台进程(background process)，或者后台任务 ，它不直接和用户进行交互的进程。用户一般是感觉不到后台进程程序的运行。</p>
+<p>当在后台运行命令时，有时需要其输出重定向输出到一个文件中去，以便以后检查。</p>
+<p>比如 在后台运行find命令，在当前目录及其子目路下查找文件名为 jn 的文件。</p>
+<pre><code>$ find . -name jn -print &gt; log.txt &amp;
+4762
+</code></pre>
+<h3 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h3><p>我们可以执行命令的时候，使用 &amp; 结尾使进程在后台运行。</p>
+<p>但是如果终端关闭，那么程序也会被关闭，因为shell会发送SIGHUP信号给这些进程。进程接收的该信号，如果没有特别的处理，缺省就会<strong>结束运行</strong>。</p>
+<p>为了避免这种情况，那么我们就可以使用 <code>nohup</code> 这个命令。</p>
+<p>比如我们有个test.sh 需要在后台运行，并且希望在后台能够一直运行，即使关闭了终端，也不退出。那么就使用nohup：</p>
+<pre><code>nohup /root/test.sh &amp;
+</code></pre>
+<h3 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h3><p>进程一般有两种终止方式。</p>
+<ul>
+<li>自行终止</li>
+</ul>
+<p>有的进程执行完一段任务后，就自行退出了。</p>
+<p>比如上面的ps命令，它执行完查看进程信息的任务后，就会结束。</p>
+<p>也有的不是自动退出，而是用户操作它，让它退出。 比如 我们在Shell进程中运行exit命令后，该Shell进程就会退出。</p>
+<p>也有的是异常退出，比如程序有个bug（比如代码里面有除以0的指令），该程序无法执行下去，也会终止。</p>
+<ul>
+<li>被强行杀死</li>
+</ul>
+<p>有的进程一直不结束，如果用户觉得该进程应该被强行结束了，该怎么办呢？</p>
+<p>对于一个前台进程，要结束它，我们只需要按组合键： <code>Ctrl + C</code> 。</p>
+<p>对于一个后台运行的进程 ，如果用户觉得该进程应该被强行结束，可以使用 <code>kill -9</code> 命令强行杀死该进程。</p>
+<p>比如上面的 python t2.py 命令运行的进程。 我们可以先用ps命令查出它的进程PID，</p>
+<pre><code>[jn@localhost ~]$ ps -f
+UID        PID  PPID  C STIME TTY       TIME     CMD
+jn       2281  1780  0 06:45 pts/0    00:00:00 -bash
+jn       1442  2281  0 07:19 pts/0    00:00:00 python pt.py
+jn       1911  2281  1 07:20 pts/0    00:00:00 ps -f
+</code></pre>
+<p>如上所示的python进程PID为 1442，我们再执行命令 kill -9 1442。 这样就强行停止了该进程。</p>
+<p>要注意的是， 上面所示的进程启动它的用户为jn，那么只能是用户jn或者root用户才能杀死该进程</p>
+<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p>Shell是个特殊的进程，因为我们通过它来执行命令，启动其他的进程的。所以它是很多进程的父进程。</p>
+<p>Shell 这个父进程有很多特性会影响到我们执行命令，其中非常重要的一个就是 <code>环境变量</code> 。</p>
+<p>环境变量 设置了 进程运行的环境信息。</p>
+<p>Linux 的环境变量具有继承性，即:子进程 会继承父进程 的环境变量。</p>
+<p>我们可以用命令printenv来查看当前shell的环境变量。</p>
+<ul>
+<li>环境变量PATH</li>
+</ul>
+<p>我们可以看到环境变量有很多，通常我们最关注的一个就是环境变量是其中的 PATH</p>
+<p>因为PATH 决定了当我们敲入命令的时候，到哪里去找这个命令对应的可执行程序。</p>
+<p>用命令 <code>echo $PATH</code> 来查看环境变量PATH的值，比如</p>
+<pre><code>[jn@localhost ~]$ echo $PATH
+/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/jn/bin
+</code></pre>
+<p>当我敲入命令ps后，shell就会 <code>依次</code> 到下面的路径去寻找ps命令对应的可执行文件 /usr/local/bin -&gt; /bin -&gt; /usr/bin -&gt; /usr/local/sbin -&gt; /usr/sbin -&gt; /sbin -&gt; /home/jn/bin</p>
+<ul>
+<li>在环境变量PATH里面添加一个新的路径</li>
+</ul>
+<p>方法一：执行命令 <code>export PATH</code></p>
+<p>比如：</p>
+<pre><code>export PATH=/test:$PATH
+</code></pre>
+<p>再次查看环境变量PATH的值，结果如下</p>
+<pre><code>[jn@localhost ~]$ echo $PATH
+/test:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/jn/bin
+</code></pre>
+<p>说明添加PATH成功。</p>
+<p>但是这种方式生效时临时的。再次登录的时候，PATH里面就又没有这个环境变量了。</p>
+<p>需要一直生效，可以使用方法二。</p>
+<p>方式二：写入到shell启动文件中</p>
+<p>所谓shell启动文件（Startup Files）是指Shell启动时 会 <code>自动加载执行</code> 的文件。</p>
+<p>既然这些文件会自动被shell加载执行，通常我们可以在里面放入一些 <code>例行</code> 执行的命令，比如设置一些环境变量。</p>
+<p>bash Shell启动文件有好几个，比如 <code>/etc/profile</code> （所有用户共享）, <code>~/.bash_profile</code> , <code>~/.bash_login</code> , and <code>~/.profile</code>。</p>
+<p><a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html">具体细节参考这个文档</a></p>
+<p>通常建议把某个用户 独有的 设置环境变量的 命令，放到用户家目录下面的 <code>.bash_profile</code> 文件中。</p>
+<p>可以在文件的结尾加入一行</p>
+<pre><code>export PATH=/test:$PATH
+</code></pre>
+<p>好了，下次登录的时候，PATH里面就会多出/test；</p>
+<p>如果要对当前的shell就立即生效，可以执行命令 <code>source .bash_profile</code></p>
+<h2 id="重定向和管道"><a href="#重定向和管道" class="headerlink" title="重定向和管道"></a>重定向和管道</h2><h3 id="stdin-stdout-stderr-与-重定向"><a href="#stdin-stdout-stderr-与-重定向" class="headerlink" title="stdin/stdout/stderr 与 重定向"></a>stdin/stdout/stderr 与 重定向</h3><p>Linux进程在启动后，通常就会打开3个文件句柄，标准输入文件（stdin），标准输出文件（stdout）和 标准错误文件（stderr）。</p>
+<p>Linux进程，要从用户那里读入输入的信息，就是从stdin文件里面读取信息，要 输出 信息 给用户看 都是 输出到 stdout， 要 输出 错误提示 给用户看 都是 输出到 stderr。</p>
+<p>而缺省情况下这三个文件stdin、stdout、stderr 都指向 —— 终端设备。</p>
+<p>也就是说：</p>
+<p>Linux进程从stdin里面读取信息其实就是从终端设备（比如终端模拟程序Putty）读取信息；</p>
+<p>Linux进程写入信息到stdout或者stderr，其实就是打印到终端设备上。</p>
+<p>如下图所示</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36462795_57582487-ff458100-74f7-11e9-9fcc-0142ae49655b.png" alt="image"></p>
+<p>比如，运行下面的Python程序，要读入信息，就是从终端读入，因为stdin指向终端设备</p>
+<pre><code class="py">input(&quot;please input info:&quot;)
+</code></pre>
+<p>再比如：下面的命令echo输出给用户看的，就是输入到终端上，因为stdout指向终端设备</p>
+<pre><code>[root@bogon ~]# echo &quot;hello jn&quot;
+hello jn
+</code></pre>
+<h3 id="Stdout、Stderr重定向"><a href="#Stdout、Stderr重定向" class="headerlink" title="Stdout、Stderr重定向"></a>Stdout、Stderr重定向</h3><p>如果我们在Shell中输入命令的时候，使用 <code>&gt;</code> 符号， 就可以将输入信息输出到其他文件（包括设备文件）中去。比如</p>
+<pre><code>ps &gt; out
+</code></pre>
+<p>运行后，我们会发现out文件里面出现了ps的输入信息，而Putty终端窗口里面则没有任何内容打印出来了。</p>
+<p>这个 <code>&gt;</code> 就是 stdout 重定向符号， 它表示 stdout 不是指向 终端设备了，而是 重定向到 out 文件。 所以stdout 指向了 out 文件， 输入的信息就到 out 文件了。 终端屏幕上就没有信息了。</p>
+<p>这时对应的示意图如下</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36462795_57582500-29973e80-74f8-11e9-819b-7adf5484ec05.png" alt="image"></p>
+<p>而Stderr的重定向符号 是 <code>2&gt;</code> 。 注意 2 和 &gt; 之间不能有空格。</p>
+<p>比如我们执行下面的命令，其中hhhh是个不存在的文件</p>
+<pre><code>ps hhhh 2&gt; err 
+</code></pre>
+<p>我们就会发现putty屏幕上没有任何信息，而文件 err里面则有。</p>
+<p>如果我们要，同时重定向stdout和stderr到同一个文件both中，命令写法如下：</p>
+<pre><code>command &amp;&gt; both
+</code></pre>
+<p>如果我们要，重定向stdout到out文件，并重定向stderr到err文件，命令写法如下：</p>
+<pre><code>command &gt; out 2&gt;err
+</code></pre>
+<h3 id="stdin重定向"><a href="#stdin重定向" class="headerlink" title="stdin重定向"></a>stdin重定向</h3><p>我们也可以在命令中，将 标准输入stdin 重定向，使用符号 <code>&lt;</code></p>
+<p>用 vi 创建一个 Python 2 代码文件 <code>add.py</code> ，其内容如下</p>
+<pre><code class="py">for i in xrange(3):
+    data=raw_input()
+    print (&#39;%s+1=%s&#39; % (data,int(data)+1))
+</code></pre>
+<p>该程序从stdin 读取一个数字后，显示其加1后的结果。</p>
+<p>再创建一个文件 add.dat内容如下(注意3后面有个空行)</p>
+<pre><code>1
+2
+3
+</code></pre>
+<p>执行如下命令</p>
+<pre><code>[jn@localhost ~]$ python add.py &lt; add.dat
+1+1=2
+2+1=3
+3+1=4
+</code></pre>
+<p>看到了吗？不需要我们从终端输入数字，该程序直接从文件 add.dat中读取数据并执行操作了。</p>
+<p>这个 <code>&lt;</code> 就是 stdin 重定向符号， 它表示 stdin 不是指向 终端设备了，而是 重定向到 add.dat 文件。 所以 stdin 指向了 add.dat 文件， 程序就从add.dat 文件读入信息 了。</p>
+<p>这时该进程对应示意图如下：</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36462795_57582718-a0353b80-74fa-11e9-9c25-7419d4a0184b.png" alt="image"></p>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>上面我们曾经学习过grep命令，这个命令可以从文件中过滤出 <code>包含指定字符串模式</code> 的行。</p>
+<p>比如我们有个文件file1，里面有的行包含了mike 这个词。如果我们想把所有包含mike的行都找出来。 可以执行命令 <code>grep mike file1</code> 。</p>
+<p>当grep命令中没有文件参数的时候比如 grep mike, 它就会等待我们在标准输入（一般是putty终端设备）中输入一行行的内容，进行实时的过滤</p>
+<p>在Linux操作过程中，我们经常需要 <strong>将一个命令的输出的内容，给另一个命令作为输入的内容</strong> 进行处理。</p>
+<p>比如，我们想查出进程号是 6536 的进程的信息。</p>
+<p>我们用ps -ef 可以显示出所有的进程信息，但是这里面的内容太多了，我想过滤出其中包含 6536 字符串的行。</p>
+<p>当然可以 用重定向符号 <code>ps –ef &gt; info.txt</code> , 然后再使用grep从 info.txt中过滤 <code>grep 6536 info.txt</code></p>
+<p>但是这样比较麻烦，我们可以使用 <code>管道操作符</code> 。</p>
+<p>我们看 这个命令 <code>ps –ef | grep 6536</code></p>
+<p>注意其中的 竖线 | ， 这个就是管道操作符，它起的作用就是</p>
+<p>● 将 前面的 ps –ef 命令的stdout（本来是输出到终端设备的） 重定向到一个 临时管道设备里面，</p>
+<p>● 同时 将后一个命令 grep 6536 的stdin重定向到这个临时的管道设备。</p>
+<p>那么这时会发生什么事情呢？ps –ef 命令的结果直接被 命令 <code>grep 6536</code> 过滤出来了。</p>
+<p>这个过程可以用如下示意图表示</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36462795_57582696-6f550680-74fa-11e9-9af7-99c62c847d13.png" alt="image"></p>
+<h2 id="网络管理"><a href="#网络管理" class="headerlink" title="网络管理"></a>网络管理</h2><h3 id="查看网络接口IP地址"><a href="#查看网络接口IP地址" class="headerlink" title="查看网络接口IP地址"></a>查看网络接口IP地址</h3><p>查看所有网络接口的IP地址，可以使用命令 <code>ip addr</code></p>
+<p>例如：</p>
+<pre><code>[root@localhost ~]# ip addr
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:b2:95:a6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.199/24 brd 192.168.10.255 scope global noprefixroute dynamic enp0s3
+       valid_lft 80268sec preferred_lft 80268sec
+    inet6 fe80::56e2:2975:7aea:744a/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>上面显示了 两个网络接口 lo 和 enp0s3。其中 lo 是环回接口，我们关注的应该是 enp0s3 这个接口。</p>
+<p>上面命令的结果显示：enp0s3 这个接口 的 IPv4 地址是 192.168.10.199</p>
+<p>CentOS 6 以前的版本，通常显示的接口名为 eth0 这样的格式， CentOS 7 显示的是 enp0s3 格式</p>
+<h3 id="启用、禁用网络接口"><a href="#启用、禁用网络接口" class="headerlink" title="启用、禁用网络接口"></a>启用、禁用网络接口</h3><p>启用和禁用网络接口，要使用root用户执行</p>
+<p>● 启用网络接口</p>
+<p>使用命令 ifup，比如下面的命令就是启用网络接口 enp0s3</p>
+<pre><code>ifup enp0s3
+</code></pre>
+<p>● 禁用网络接口</p>
+<p>使用命令 ifdown，比如下面的命令就是禁用网络接口 enp0s3</p>
+<pre><code>ifdown enp0s3
+</code></pre>
+<h3 id="ping-检测网络连通性"><a href="#ping-检测网络连通性" class="headerlink" title="ping 检测网络连通性"></a>ping 检测网络连通性</h3><p>我们经常需要检查到一个主机是否网络通畅，这时应该使用 <code>ping</code> 命令</p>
+<p>例如：</p>
+<pre><code>$ ping 192.168.100.1
+PING 192.168.100.1 (192.168.100.1) 56(84) jntes of data.
+64 jntes from 192.168.100.1: icmp_seq=1 ttl=64 time=0.158 ms
+64 jntes from 192.168.100.1: icmp_seq=2 ttl=64 time=0.228 ms
+64 jntes from 192.168.100.1: icmp_seq=3 ttl=64 time=0.281 ms
+</code></pre>
+<p>上面的结果就表示 本机 和 IP 为192.168.100.1 的设备（可能是计算机也可能是路由器）之间的网络是通畅的。</p>
+<p>可以按ctrl+C终止 测试。</p>
+<h3 id="netstat-查看网络状态"><a href="#netstat-查看网络状态" class="headerlink" title="netstat 查看网络状态"></a>netstat 查看网络状态</h3><p>netstat - 查看各种与网络相关的状态信息，包括：网络的连接、状态、接口的统计信息、路由表、端口的监听情况</p>
+<p>常用参数：</p>
+<p><code>-a</code> (all)显示所有选项，默认不显示LISTEN相关</p>
+<p><code>-t</code> (tcp)仅显示tcp相关选项</p>
+<p><code>-u</code> (udp)仅显示udp相关选项</p>
+<p><code>-n</code> 不显示端口协议名，显示端口数字</p>
+<p><code>-l</code> 只显示 Listen (监听) 的状态端口</p>
+<p><code>-p</code> 显示建立相关链接的进程PID</p>
+<p><code>-r</code> 显示路由信息，路由表</p>
+<p>Netstat 最常用的地方就是查看网络连接情况，比如查看22端口上的tcp网络连接情况</p>
+<p>使用命令 <code>netstat -anp|grep 22 |grep tcp</code></p>
+<pre><code>[root@localhost ~]# netstat -anp |grep 22 |grep tcp
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      977/sshd
+tcp        0     52 192.168.10.199:22       192.168.10.92:63911     ESTABLISHED 2011/sshd: root@pts
+tcp6       0      0 :::22                   :::*                    LISTEN      977/sshd
+</code></pre>
+<p>如果你执行netstat命令，系统提示找不到该命令， 可以先执行 yum install net-tools 安装一下 {: .notice–info}</p>
+<h3 id="ssh（secure-shell）登录远程机器"><a href="#ssh（secure-shell）登录远程机器" class="headerlink" title="ssh（secure shell）登录远程机器"></a>ssh（secure shell）登录远程机器</h3><p>在Linux下，也可以远程登录其他Linux主机，只需要运行ssh命令即可。</p>
+<p>命令的格式如下</p>
+<pre><code>ssh  用户名@IP地址或机器域名
+</code></pre>
+<p>比如，你要 使用 user1 账号 远程登录 192.168.1.12 这台Linux机器，执行下面的命令</p>
+<pre><code>[jn@localhost ~]$ ssh user1@192.168.1.12
+</code></pre>
+<p>一般首次登录某个主机的时候，会出现如下提示：</p>
+<pre><code>The authenticity of host &#39;192.168.1.12 (192.168.1.12)&#39; can&#39;t be established.
+RSA key fingerprint is cf:2c:22:d1:e8:4e:f3:16:43:09:9c:c6:fe:fc:9a:22.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre>
+<p>这是因为该远程机器没有被认证过（可能会有‘中间人’攻击的安全隐患），让你确认一下。这里如果是局域网里面的机器，一般安全没有什么问题，输入yes并回车即可。</p>
+<p>接下来，会提示输入对应用户的密码，你输入正确的密码即可登录。</p>
+<h3 id="scp-拷贝文件"><a href="#scp-拷贝文件" class="headerlink" title="scp 拷贝文件"></a>scp 拷贝文件</h3><p>在Linux上，可以直接使用scp命令 和远程Linux主机 进行文件的拷贝。</p>
+<p>scp是secure copy的缩写，意为文件安全拷贝，它可以将远程Linux系统上的文件拷贝到本地计算机，也可以将本地计算机上的文件拷贝到远程Linux系统上。</p>
+<p>比如：</p>
+<p>我们已经登录到主机A上面，要将 /home/jn1 目录下面的文件abc.txt，拷贝到主机B的/home/jn2目录下面，主机B的IP地址为：192.168.1.12</p>
+<p>我们要拷贝到 B主机， 必须要有B主机的用户账号， 假如B主机的账号是 jn2，应该这样写</p>
+<pre><code>scp /home/jn1/abc.txt jn2@192.168.1.12:/home/jn2
+</code></pre>
+<p>接下来，会提示用户输入用户jn2的密码，输入正确密码后，进行拷贝操作。</p>
+<p>如果，我们要 在主机A上面，将主机B上面的文件/home/jn2/123.txt 拷贝到主机A的/tmp/下面：</p>
+<pre><code>scp jn2@192.168.1.12:/home/jn2/123.txt /tmp/
+</code></pre>
+<h3 id="wget下载"><a href="#wget下载" class="headerlink" title="wget下载"></a>wget下载</h3><p>Linux中，要从网络下载文件，可以使用 wget。</p>
+<p>wget就是一个下载文件的命令行工具。</p>
+<p>例如：</p>
+<pre><code>wget https://mirrors.aliyun.com/centos/timestamp.txt
+</code></pre>
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><h4 id="FirewallD"><a href="#FirewallD" class="headerlink" title="FirewallD"></a>FirewallD</h4><p>在CentOS 7 上， FirewallD 是 缺省的防火墙服务程序。</p>
+<p>● 开放端口</p>
+<p>如果我们允许 任何 地址的 机器访问 本机的 TCP 协议 3306 端口，应该这样执行命令</p>
+<pre><code class="py"># firewall-cmd --permanent --add-port=3306/tcp 
+# firewall-cmd --reload
+</code></pre>
+<p>第一行命令 在 配置文件中，设置打开端口3306</p>
+<p>第二行命令将 配置文件的设置 重新加载，使配置立即生效。</p>
+<p>可以执行如下命令检查 当前的 防火墙设置</p>
+<pre><code class="py"># firewall-cmd --list-ports
+3306/tcp
+</code></pre>
+<p>我们甚至可以 开放 一定范围内的 所以端口，如下</p>
+<pre><code class="py"># firewall-cmd --permanent --add-port=200-300/tcp
+</code></pre>
+<p>就打开了 200 到 300 所有的 tcp 端口。</p>
+<p>● 关闭端口</p>
+<p>要关闭 端口，执行下面的命令</p>
+<pre><code class="py"># firewall-cmd --permanent --remove-port=3306/tcp 
+# firewall-cmd --reload
+</code></pre>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="启动、重启、关闭服务"><a href="#启动、重启、关闭服务" class="headerlink" title="启动、重启、关闭服务"></a>启动、重启、关闭服务</h3><p>Linux上有些软件程序是以服务的形式安装的，比如 ssh 服务、 MySQL服务、 防火墙 服务等。</p>
+<p>这些 软件 的启动、重启、关闭 要使用特殊的命令</p>
+<p>在centos 7 系统上，使用命令 systemctl 来 启动、重启、关闭 服务。</p>
+<p>比如，</p>
+<p>要查看 MySQL服务 mysqld状态， 执行命令 <code>systemctl status mysqld</code></p>
+<p>要启动 MySQL服务 mysqld， 执行命令 <code>systemctl start mysqld</code></p>
+<p>要重启 MySQL服务 mysqld， 执行命令 <code>systemctl restart mysqld</code></p>
+<p>要关闭 MySQL服务 mysqld， 执行命令 <code>systemctl stop mysqld</code></p>
+<h3 id="打包与压缩"><a href="#打包与压缩" class="headerlink" title="打包与压缩"></a>打包与压缩</h3><h4 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h4><p>Linux下打包的最常用命令是tar 命令，可将多个文件、目录打包到一个文件中。</p>
+<ul>
+<li>tar 命令打包</li>
+</ul>
+<p>下面是使用tar命令打包的操作演示：</p>
+<p>在当前工作目录下面创建3个文件，使用下列命令：</p>
+<pre><code>touch  123.txt  456.txt  789.txt
+</code></pre>
+<p>将这3个文件放到一个文件包files.tar,使用下列命令：</p>
+<pre><code>tar  cvf  files.tar  123.txt   456.txt  789.txt
+</code></pre>
+<p>也可以使用通配符，如 *.txt，这样的格式代表以txt结尾的文件</p>
+<pre><code>tar  cvf  files1.tar   *.txt  
+</code></pre>
+<p>tar命令同样可以打包目录，假设 当前目录下 jn是一个子目录，jn.txt是一个文件</p>
+<pre><code class="py">tar cvf jn.tar  ./jn  jn.txt
+</code></pre>
+<p>这个命令就把目录 jn 和 文件 jn.txt 都 打包到 文件 jn.tar 中了。</p>
+<ul>
+<li>tar 命令解包</li>
+</ul>
+<p>要 将 上面创建的 files1.tar 解压到当前目录，使用下列命令：</p>
+<pre><code>tar  xvf   files.tar 
+</code></pre>
+<ul>
+<li>查看tar 包内容</li>
+</ul>
+<p>如果只是想查看 上面创建的 files1.tar 内容，使用下列命令：</p>
+<pre><code>tar  tvf   files.tar 
+</code></pre>
+<ul>
+<li>往tar 包中添加文件</li>
+</ul>
+<p>如果想 在 files1.tar中 添加 新文件 newfile，使用下列命令：</p>
+<pre><code>tar  rvf  files.tar  newfile
+</code></pre>
+<p>注意：tar命令只是把文件、目录打包到一个文件中。 并不会压缩文件 {: .notice–info}</p>
+<h4 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h4><ul>
+<li>gzip 压缩 和解压</li>
+</ul>
+<p>gzip命令用于文件的压缩与解压缩，压缩后的文件名后缀为“.gz”</p>
+<p>比如</p>
+<p>要 压缩文件abc.txt ，执行命令</p>
+<pre><code>gzip abc.txt
+</code></pre>
+<p>这样就产生了一个名为 abc.txt.gz 的压缩后的文件</p>
+<p>要 解压文件abc.txt.gz，执行命令</p>
+<pre><code>gzip -d abc.txt.gz
+</code></pre>
+<ul>
+<li>gzip 和 tar 的联合使用</li>
+</ul>
+<p>tar工具与gzip工具联合使用，实现打包并压缩、解压缩并解包功能</p>
+<p>假设 在当前目录有如下3个文件 touch 111.txt 222.txt 333.txt</p>
+<p>我们要，打包并压缩这3个文件，放到压缩包文件 jn.tar.gz里面，使用下面命令：</p>
+<pre><code>tar zcvf   jn.tar.gz   *.txt 
+</code></pre>
+<p>解压缩并解包，使用下面命令：</p>
+<pre><code>tar zxvf  jn.tar.gz 
+</code></pre>
+<p>● bzip2、zip 压缩、解压</p>
+<p>bzip2 和 zip 也是常见的压缩解压工具， 使用方法和 gzip 类似</p>
+<p>如下</p>
+<pre><code>---------------------------------------------
+.bz2
+解压1：bzip2 -d FileName.bz2
+解压2：bunzip2 FileName.bz2
+压缩： bzip2 -z FileName
+.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+压缩：tar jcvf FileName.tar.bz2 DirName
+---------------------------------------------
+.zip
+解压：unzip FileName.zip
+压缩：zip -r FileName.zip DirName
+---------------------------------------------
+</code></pre>
+<p>注意：如果你的Linux上没有安装 bzip2、zip、unzip，可以执行命令 <code>yum install bzip2 zip unzip</code> 来安装</p>
+<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p>在 CentOS上，安装软件通常有如下几种方式</p>
+<h4 id="下载源代码包，编译安装"><a href="#下载源代码包，编译安装" class="headerlink" title="下载源代码包，编译安装"></a>下载源代码包，编译安装</h4><p>这种源代码包，通常都是放在以 tar.gz tar.bz2 为扩展名的压缩包中。</p>
+<p>源代码包里面的大都是 c语言代码文件，需要编译后才能安装。</p>
+<p>我们 以python3.6 为例，讲解一下，如何安装。</p>
+<ul>
+<li><p>执行下面的命令，安装Python3.6必需的库</p>
+<p>yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</p>
+</li>
+<li><p>下载 python3 源代码包</p>
+<p>执行命令 <code>wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz</code></p>
+</li>
+<li><p>解压代码包</p>
+<p>执行命令 <code>tar zxf Python-3.6.8.tgz</code></p>
+</li>
+<li><p>安装编译器gcc</p>
+<p>如果你的Linux上还没有安装gcc编译器，执行命令 <code>yum install gcc</code> 安装</p>
+</li>
+<li><p>配置、编译、安装</p>
+<p>先进入到解压后的python代码目录</p>
+<pre><code class="py">cd Python-3.6.8 
+</code></pre>
+<p>依次执行下面的2个命令进行配置和编译、安装</p>
+<pre><code>./configure ; 
+make &amp;&amp; make install
+</code></pre>
+</li>
+</ul>
+<h4 id="下载rpm包，使用rpm工具安装"><a href="#下载rpm包，使用rpm工具安装" class="headerlink" title="下载rpm包，使用rpm工具安装"></a>下载rpm包，使用rpm工具安装</h4><p>CentOS上也经常使用rpm 命令安装软包。</p>
+<p>当我们有rpm软件包，就可以使用rpm命令安装</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>使用命令</p>
+<pre><code class="py">rpm -ivh rpm软件包名
+</code></pre>
+<p>比如， <code>rpm -ivh software-1.2.3-1.i386.rpm</code></p>
+<ul>
+<li>卸载</li>
+</ul>
+<p>使用命令</p>
+<pre><code class="py">rpm -e 软件名 
+</code></pre>
+<p>不过要注意的是，后面使用的是软件名，而不是软件包名。</p>
+<p>例如，要安装software-1.2.3-1.i386.rpm这个包时，应执行：</p>
+<pre><code>rpm -ivh software-1.2.3-1.i386.rpm 
+</code></pre>
+<p>而当卸载时，则应执行：</p>
+<pre><code class="py">rpm -e software
+</code></pre>
+<h4 id="YUM安装"><a href="#YUM安装" class="headerlink" title="YUM安装"></a>YUM安装</h4><p>YUM 是 在Fedora、RedHat、SUSE、CentOS中最常见也是最方便的一种安装方式。</p>
+<p>能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装</p>
+<p>yum命令用法</p>
+<ul>
+<li>yum install package1 安装指定的安装包package1</li>
+<li>yum list 显示所有已经安装和可以安装的程序包</li>
+<li>yum list installed 显示所有已经安装的程序包</li>
+<li>yum list package1 显示指定程序包安装情况package1</li>
+<li>yum remove package1 删除程序包package1</li>
+</ul>
+<h3 id="top-查看系统进程的动态运行情况"><a href="#top-查看系统进程的动态运行情况" class="headerlink" title="top 查看系统进程的动态运行情况"></a>top 查看系统进程的动态运行情况</h3><p>执行top命令可以查看 当前系统中，运行的进程的信息，比如</p>
+<pre><code>[root@localhost ~]# top
+
+top - 14:01:00 up 15:52,  2 users,  load average: 0.00, 0.01, 0.05
+Tasks:  97 total,   1 running,  96 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
+KiB Mem :  2895572 total,  2507692 free,   118824 used,   269056 buff/cache
+KiB Swap:  3145724 total,  3145724 free,        0 used.  2598756 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+ 2041 root      20   0       0      0      0 S  0.3  0.0   0:03.60 kworker/0:3
+    1 root      20   0  127960   6580   4104 S  0.0  0.2   0:01.91 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.29 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    6 root      20   0       0      0      0 S  0.0  0.0   0:00.05 kworker/u2:0
+    7 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.94 rcu_sched
+   10 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-dra+
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.48 watchdog/0
+   13 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   14 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.01 khungtaskd
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+   17 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+</code></pre>
+<p>● CPU 整体负载</p>
+<p>在这行显示了 CPU 整体负载</p>
+<pre><code>Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
+</code></pre>
+<p>● 各个CPU 的负载（按键盘1，可以在整体cpu和所有cpu之间切换）</p>
+<pre><code>Cpu0  :  0.3%us,  0.3%sy,  0.0%ni, 97.7%id,  1.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Cpu1  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu2  :  0.0%us,  0.3%sy,  0.0%ni, 99.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu3  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+</code></pre>
+<ul>
+<li>进程的CPU占用</li>
+</ul>
+<p>缺省情况下，进程列表里就是按CPU占用率来排序的。</p>
+<p>如果不是，可以按快捷键大写的P要求top按照CPU占用率来排序。（按b，再按x可以显示当前排序列）</p>
+<ul>
+<li>整体内存使用量</li>
+</ul>
+<pre><code class="py">KiB Mem :  2895572 total,  2507692 free,   118824 used,   269056 buff/cache
+KiB Swap:  3145724 total,  3145724 free,        0 used.  2598756 avail Mem
+</code></pre>
+<p>注意：上面显示 2507692 free，并非只有 2507692 的内存可用。</p>
+<p>因为 buffer 和 cache 部分的内存都是临时缓存用了， 其实也是可用的内存</p>
+<p>实际可用的内存大概是 free + buffers + cached</p>
+<ul>
+<li>各个进程对内存的占用（RES）</li>
+</ul>
+<p>按快捷键大写的 M 可以 对进程列表按照内存使用率来排序</p>
+<h3 id="查看系统内存使用情况"><a href="#查看系统内存使用情况" class="headerlink" title="查看系统内存使用情况"></a>查看系统内存使用情况</h3><p>free命令可以显示Linux系统中空闲的、已用的物理内存及swap内存,及被内核使用的buffer。</p>
+<pre><code>[root@localhost ~]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:           2827         115        2449           8         262        2538
+Swap:          3071           0        3071
+</code></pre>
+<h3 id="查看设置系统时间"><a href="#查看设置系统时间" class="headerlink" title="查看设置系统时间"></a>查看设置系统时间</h3><p>date 可以用来显示或设定系统的日期与时间。</p>
+<ul>
+<li>显示当前日期和时间</li>
+</ul>
+<pre><code>[jn@localhost ~]$ date
+Mon Nov 7  23:25:05 PST 2018
+</code></pre>
+<ul>
+<li>设定日期</li>
+</ul>
+<pre><code># date -s 20161109
+</code></pre>
+<ul>
+<li>设定时间</li>
+</ul>
+<pre><code># date -s 21:05:50
+</code></pre>
+<h3 id="查看系统版本"><a href="#查看系统版本" class="headerlink" title="查看系统版本"></a>查看系统版本</h3><ul>
+<li>执行命令 <code>uname –a</code> 查看系统内核版本信息</li>
+</ul>
+<pre><code>[root@localhost ~]# uname -a
+Linux bogon 3.10.0-862.el7.x86_64 #1 SMP Fri Apr 20 16:44:24 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
+<p>其中3.10.0 为Linux内核的版本。</p>
+<ul>
+<li>执行命令 <code>cat /etc/redhat-release</code> 查看Linux系统版本信息</li>
+</ul>
+<pre><code>[root@localhost ~]# cat /etc/redhat-release
+CentOS Linux release 7.5.1804 (Core)
+</code></pre>
+<p>其中，显示Linux发行版本为 CentOS Linux 7.5.1804 版本</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">姜楠</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://jnan-qq.github.io/2021/0122undefined.html">https://jnan-qq.github.io/2021/0122undefined.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">姜楠</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/0125undefined.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Mysql 安装">
+                        
+                        <span class="card-title">Mysql 安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            姜楠
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/0120undefined.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="编写测试用例">
+                        
+                        <span class="card-title">编写测试用例</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            姜楠
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Test/">
+                        <span class="chip bg-color">Test</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Jnblog<br />'
+            + '文章作者: 姜楠<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">姜楠</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/JNan-QQ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:896333574@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=896333574" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 896333574" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
