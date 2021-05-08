@@ -507,14 +507,14 @@
 <p>在该模式下，不可以输入文字，那干什么呢？</p>
 <p>那命令模式下面我们通常可以干什么呢？</p>
 <p>首先就是移动光标</p>
-<pre><code class="java">键盘h键 － 光标左移一个字符
+<pre><code class="python">键盘h键 － 光标左移一个字符
 键盘j键 － 光标下移一个字符
 键盘k键 － 光标上移一个字符
 键盘l键 － 光标右移一个字符
 </code></pre>
 <p>当然 也可以通过键盘 <code>方向键</code> 来移动光标位置。</p>
 <p>另外还支持下面的按键操作</p>
-<pre><code class="java">按0或^ － 光标移动到所在行的行首
+<pre><code class="python">按0或^ － 光标移动到所在行的行首
 按$    － 光标移动到所在行的行尾
 输入gg － 把光标移到文件开始位置
 输入G  － 把光标移到文件末尾
@@ -522,13 +522,13 @@
 输入Ctrl + b  －  往上翻一页
 </code></pre>
 <p>删除文字也是我们常做的操作</p>
-<pre><code class="java">按x  － 删除光标所在字符
+<pre><code class="python">按x  － 删除光标所在字符
 按dd － 删除光标所在行
 按dw － 删除光标所在处到词尾的内容
 按d$ － 删除光标所在处到行尾的内容
 </code></pre>
 <p>另外，还有下面这些操作</p>
-<pre><code class="py">按yy – 复制光标所在的行
+<pre><code class="python">按yy – 复制光标所在的行
 按p – 黏贴
 按v，然后移动光标，可以选择内容，再按y复制选中的内容
 按u – 撤销刚才所做的操作
@@ -539,7 +539,7 @@
 <p>要输入文字，就必须 切换到插入模式。</p>
 <p>怎么切换到插入模式呢？</p>
 <p>从命令模式进入插入模式的方式有：</p>
-<pre><code class="py">按a－将在光标所在位置之后插入文本（append）
+<pre><code class="python">按a－将在光标所在位置之后插入文本（append）
 按i－将在光标所在位置之前插入文本(insert)
 按o－将在光标所在行之后插入一新行
 </code></pre>
@@ -724,7 +724,7 @@ file5.jpg  hy2.jpg   hyjn.jpg
 <p>当然，我们可以使用vi打开这个文件，然后再底行模式输入 <code>/Error</code> 查看。</p>
 <p>更快捷的方式，就是直接 使用 grep命令</p>
 <p>比如</p>
-<pre><code>$ grep Error django.log
+<pre><code class="python">$ grep Error django.log
 1130_15:57:28 Internal Server Error: /api/cust/pages
     raise ExpiredSignatureError(&#39;Signature has expired&#39;)
 jwt.exceptions.ExpiredSignatureError: Signature has expired
@@ -737,7 +737,7 @@ jwt.exceptions.ExpiredSignatureError: Signature has expired
 </code></pre>
 <p>如果你想同时显示 各行的行号，可以加上参数 -n</p>
 <p>比如</p>
-<pre><code>$ grep Error django.log -n
+<pre><code class="python">$ grep Error django.log -n
 1:1130_15:57:28 Internal Server Error: /api/cust/pages
 18:    raise ExpiredSignatureError(&#39;Signature has expired&#39;)
 19:jwt.exceptions.ExpiredSignatureError: Signature has expired
@@ -750,7 +750,7 @@ jwt.exceptions.ExpiredSignatureError: Signature has expired
 </code></pre>
 <p>如果你要查找的不仅仅是Error 这样的 一个单词，而是一段句子，比如 要找 <code>Internal Server Error</code></p>
 <p>就需要使用双引号，这样写</p>
-<pre><code>$ grep &quot;Internal Server Error&quot; django.log -n
+<pre><code class="python">$ grep &quot;Internal Server Error&quot; django.log -n
 1:1130_15:57:28 Internal Server Error: /api/cust/pages
 20:1130_16:00:20 Internal Server Error: /api/cust/pages
 39:1130_16:08:38 Internal Server Error: /api/cust/pages
@@ -778,7 +778,7 @@ jwt.exceptions.ExpiredSignatureError: Signature has expired
 <pre><code>jn❌1000:1000::/home/jn:/bin/bash
 </code></pre>
 <p>/etc/passwd文件每行对应一个用户的信息。 一行中的字段用”:“隔开。每个字段的含义分别是</p>
-<pre><code>用户名
+<pre><code class="py">用户名
 登录密码 
 用户ID 
 用户Group ID

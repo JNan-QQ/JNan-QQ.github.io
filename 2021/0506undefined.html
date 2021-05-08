@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mysql应用, Jnblog">
+    <meta name="keywords" content="Pytest, Jnblog">
     <meta name="description" content="也许你错过了上一站的美好，才遇见了下一站的惊喜。面对复杂，保持欢喜。加油，别让人生输给心情">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mysql应用 | Jnblog</title>
+    <title>Pytest | Jnblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mysql应用</h1>
+                    <h1 class="description center-align post-title">Pytest</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mysql/">
-                                <span class="chip bg-color">mysql</span>
+                            <a href="/tags/pytezh/">
+                                <span class="chip bg-color">pytezh</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-26
+                    2021-05-06
                 </div>
                 
 
@@ -468,386 +468,411 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据库和表"><a href="#数据库和表" class="headerlink" title="数据库和表"></a>数据库和表</h1><h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><h3 id="列出所有数据库"><a href="#列出所有数据库" class="headerlink" title="列出所有数据库"></a>列出所有数据库</h3><p>我们可以使用如下SQL语句 <code>SHOW DATABASES;</code> 来查看系统中目前有哪些数据库。</p>
-<pre><code class="sql">mysql&gt; SHOW DATABASES;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-4 rows in set (0.00 sec)
+                <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>直接执行 如下命令即可安装 pytest</p>
+<pre><code class="py">pip install pytest 
 </code></pre>
-<h3 id="创建、删除数据库"><a href="#创建、删除数据库" class="headerlink" title="创建、删除数据库"></a>创建、删除数据库</h3><p>我们可以执行如下SQL语句来创建名为jn的数据库</p>
-<pre><code class="py">CREATE DATABASE jn; 
+<p>我们还需要产生测试报表，所以要安装一个第三方插件 <code>pytest-html</code> ，执行如下命令安装</p>
+<pre><code class="py">pip install pytest-html
 </code></pre>
-<p>指定utf8的编码，需要这样写</p>
-<pre><code class="sql">CREATE DATABASE jn CHARACTER SET utf8mb4  COLLATE utf8mb4_unicode_520_ci;
-</code></pre>
-<p>删除一个数据库，使用命令 <code>DROP DATABASE</code></p>
-<pre><code class="py">mysql&gt; DROP DATABASE jn;
-Query OK, 0 rows affected (0.03 sec)
-</code></pre>
-<p>注意，SQL 语句的关键字 是 大小写不敏感的，但是 上面的数据库名字是大小写敏感的，你不能这样写 <code>DROP DATABASE JN;</code></p>
-<h3 id="数据库导出、导入"><a href="#数据库导出、导入" class="headerlink" title="数据库导出、导入"></a>数据库导出、导入</h3><p>导出:</p>
-<p>执行下面的命令可以把jn数据库里面所有的数据导出为sql数据文件</p>
-<pre><code class="py">mysqldump –u username –p --databases dbname &gt; data.sql
-</code></pre>
-<p>导入:</p>
-<p>执行下面的命令可以把 导出为sql数据文件 的数据 导入到 数据库byhy中</p>
-<pre><code class="py">mysql –u username –p  &lt; data.sql
-</code></pre>
-<h2 id="表的操作"><a href="#表的操作" class="headerlink" title="表的操作"></a>表的操作</h2><p>要对表进行操作，首先要指明你操作的是哪个数据库。应该使用 <code>use</code> ，如下所示</p>
-<pre><code class="sql">mysql&gt; use jn;
-Database changed
-</code></pre>
-<p><code>use byhy;</code> 表示我们要操作的数据库名称是 jn。</p>
-<h3 id="列出当前数据库中所有表"><a href="#列出当前数据库中所有表" class="headerlink" title="列出当前数据库中所有表"></a>列出当前数据库中所有表</h3><p>我们可以使用如下SQL语句 <code>show tables;</code> 来查看当前数据库里有哪些表。</p>
-<pre><code class="sql">mysql&gt; show tables;
-Empty set (0.00 sec)
-</code></pre>
-<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p>要创建表，最主要的是要指明表中的各个字段</p>
-<p>可以执行如下SQL语句来创建名为user的表</p>
-<pre><code class="sql">CREATE TABLE user (
-  id int NOT NULL AUTO_INCREMENT,
-  username varchar(150)  NOT NULL,
-  `password` varchar(128)  NOT NULL,
-  realname varchar(30)  NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB;
-</code></pre>
-<p><code>CREATE TABLE</code> 就是创建 表的 SQL 语句 后面跟 表的名字，这里就是 user 作为表名。</p>
-<p>接下来括号里面的 是表中 各列的数据类型、特性的描述。</p>
-<p>前面 4 行指定了该表中有 4 列， 每列的 名字分别为 id、username、password、realname。</p>
-<p>其中 id 是整数类型， 其他的都是字符串类型。</p>
-<p>由于 password正好 是MySQL的一个关键字， 我们的字段名如果和关键字重名，应该用反引号 把字段包起来，表示这不是关键字。</p>
-<p>其中：</p>
-<p><code>NOT NULL</code> 表示这列的数据不能为空。 就是每条记录，这一列里面一定要有数据内容。</p>
-<p><code>AUTO_INCREMENT</code> 表示该列中的字段内容是自动递增的，也就是从1开始，添加一条记录id字段的值就自动加1</p>
-<p>通常每张表，就应该有个 AUTO_INCREMENT 的 id字段， 为每条记录 产生一个编号。</p>
-<p><code>PRIMARY KEY (id)</code> 这行 指定了id这列作为主键。</p>
-<p>可以通过命令行 <code>SHOW CREATE TABLE user\G</code> 来查看创建表的语句，从而查看表的结构</p>
-<pre><code class="sql">mysql&gt; show create table user\G
-*************************** 1. row ***************************
-       Table: user
-Create Table: CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(150) NOT NULL,
-  `password` varchar(128) NOT NULL,
-  `realname` varchar(30) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
-1 row in set (0.00 sec)****
-</code></pre>
-<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>使用命令 <code>DROP TABLE</code></p>
-<pre><code class="sql">mysql&gt; DROP TABLE user;
-Query OK, 0 rows affected (0.01 sec)
-</code></pre>
-<p>注意，SQL 语句的关键字 是 大小写不敏感的，但是 上面的表名字是大小写敏感的，你不能这样写 <code>DROP DATABASE USER;</code></p>
-<h3 id="更改表名字"><a href="#更改表名字" class="headerlink" title="更改表名字"></a>更改表名字</h3><p>要更改表的名字，可以使用命令 <code>RENAME TABLE</code> ，可以一次修改多个表的名字。</p>
-<pre><code class="sql">mysql&gt; RENAME TABLE user TO user, medicine TO jn;
-Query OK, 0 rows affected (0.01 sec)
-</code></pre>
-<h3 id="修改表结构"><a href="#修改表结构" class="headerlink" title="修改表结构"></a>修改表结构</h3><p>修改表结构包括很多种处理 ： 添加、删除、重命名 列， 添加、删除、修改索引、主键等等。</p>
-<p>具体可以参考 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/alter-table.html">MySQL官方网站</a></p>
-<p>这里列出几个，比较常见的操作。</p>
-<h4 id="添加列"><a href="#添加列" class="headerlink" title="添加列"></a>添加列</h4><p>如果要在user表中添加两列 description 和 qq</p>
-<pre><code class="sql">mysql&gt; ALTER TABLE user ADD `description` varchar(850) NOT NULL, ADD `qq` varchar(20) NOT NULL;
-Query OK, 0 rows affected (0.02 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-</code></pre>
-<h4 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h4><p>如果要在user表中删除两列 description 和 qq</p>
-<pre><code class="sql">mysql&gt; ALTER TABLE user DROP `description` , DROP `qq`;
-Query OK, 0 rows affected (0.01 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-</code></pre>
-<h4 id="修改列"><a href="#修改列" class="headerlink" title="修改列"></a>修改列</h4><p>如果要在user表中修改列 realname 名字为 realname1</p>
-<pre><code class="sql">mysql&gt; ALTER TABLE user CHANGE  `realname` `realname1`  varchar(30) NOT NULL;
-Query OK, 0 rows affected (0.01 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-</code></pre>
-<p>如果要在user表中修改列 realname 名字为 realname1， <code>并且修改类型</code> 为 char(30)</p>
-<pre><code class="sql">mysql&gt; ALTER TABLE user CHANGE  `realname` `realname1`  char(30) NOT NULL;
-Query OK, 0 rows affected (0.01 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-</code></pre>
-<h3 id="插入表记录"><a href="#插入表记录" class="headerlink" title="插入表记录"></a>插入表记录</h3><p>前面我们使用如下SQL语句 创建了名为user的表</p>
-<pre><code class="sql">CREATE TABLE user (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(150)  NOT NULL,
-  `password` varchar(128)  NOT NULL,
-  `realname` varchar(30)  NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB;
-</code></pre>
-<p>这还是一张空表，要添加一条记录，使用 INSERT INTO 语句，</p>
-<pre><code class="sql">INSERT INTO user (username,`password`,realname) VALUES (&#39;jn1&#39;,&#39;password1&#39;,&#39;江南1&#39;);
-</code></pre>
-<h4 id="添加多条记录"><a href="#添加多条记录" class="headerlink" title="添加多条记录"></a>添加多条记录</h4><p>如果要添加多条记录，非常简单，如下所示</p>
-<pre><code class="sql">INSERT INTO user (username,`password`,realname) VALUES 
-    (&#39;jn1&#39;,&#39;password1&#39;,&#39;江南1&#39;),
-    (&#39;jn2&#39;,&#39;password1&#39;,&#39;江南2‘),
-    (&#39;jn3&#39;,&#39;password1&#39;,&#39;江南3&#39;),
-    (&#39;jn4&#39;,&#39;password1&#39;,&#39;江南4&#39;);
-</code></pre>
-<h3 id="查询、修改、删除表记录"><a href="#查询、修改、删除表记录" class="headerlink" title="查询、修改、删除表记录"></a>查询、修改、删除表记录</h3><h4 id="查询表记录"><a href="#查询表记录" class="headerlink" title="查询表记录"></a>查询表记录</h4><pre><code class="sql">select * from user;
-</code></pre>
-<p>*代表查询所有的列</p>
-<p>这个user表，我们只想查看 id和username 这两列的信息，就可以这样写</p>
-<pre><code class="sql">select id,username  from user;
-</code></pre>
-<h4 id="查询过滤"><a href="#查询过滤" class="headerlink" title="查询过滤"></a>查询过滤</h4><p>我们有时候只需要查询其中符合某些条件的部分信息。 这就叫过滤查询。</p>
-<p>根据进过滤条件查询，我们使用 <code>where从句</code></p>
-<h4 id="过滤条件"><a href="#过滤条件" class="headerlink" title="过滤条件"></a>过滤条件</h4><p>比如，上面的user表，我们只需要查询 用户名为 jn3 的那个用户的信息，就可以这样</p>
-<pre><code class="sql">select *  from user where username=&#39;jn3&#39;;
-</code></pre>
-<p>其中 <code>username=&#39;jn3&#39;</code> 里面的等号就是一个过滤条件的 <code>操作符</code> ，表示过滤条件是查找记录的username字段值等于jn3。</p>
-<p>如果我们只需要查询 id为 2 的那个用户的信息，就可以这样</p>
-<pre><code class="sql">select *  from user where id=2;
-</code></pre>
-<p>除了等于条件（使用 =）， 还有</p>
+<h1 id="重大BUG：目录级别用例清除，不一按是在目录结束清除"><a href="#重大BUG：目录级别用例清除，不一按是在目录结束清除" class="headerlink" title="重大BUG：目录级别用例清除，不一按是在目录结束清除"></a>重大BUG：目录级别用例清除，不一按是在目录结束清除</h1><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>pytest 如何知道你哪些代码是自动化的测试用例？</p>
+<p>官方文档 给出了 pytest 寻找 测试项 的 具体规则</p>
 <ul>
-<li>不等于（使用 &lt;&gt; 或者 !=）</li>
-</ul>
-<pre><code class="sql">select *  from user where id!=1;
-</code></pre>
-<ul>
-<li>大于（使用 &gt; ）</li>
-</ul>
-<pre><code class="sql">select *  from user where id&gt;3;
-</code></pre>
-<ul>
-<li>小于（使用 &lt; ）</li>
-</ul>
-<pre><code class="sql">select *  from user where id&lt;3;
-</code></pre>
-<ul>
-<li>大于等于（使用 &gt;= ）</li>
-</ul>
-<pre><code class="sql">select *  from user where id&gt;=3;
-</code></pre>
-<ul>
-<li>小于等于（使用 &lt;= ）</li>
-</ul>
-<pre><code class="sql">select *  from user where id&lt;=3;
-</code></pre>
-<ul>
-<li>包含字符 （使用 like 和 % ）</li>
-</ul>
-<pre><code class="sql">/* 以 jn 开头*/
-select *  from user where username like &quot;jn%&quot;;
-/* 以 33 结尾*/
-select *  from user where username like &quot;%33&quot;;
-/* 以 jn 开头 并且 以 33 结尾*/
-select *  from user where username like &quot;byhy%33&quot;;
-/* 包含 jn */
-select *  from user where username like &quot;%jn%&quot;;
-</code></pre>
-<ul>
-<li>在集合里面 （使用 in）</li>
-</ul>
-<pre><code class="sql">/* id 在指定集合里面 */
-select * from user where id in (1,2,3);
-
-/* usernmae 在指定集合里面 */
-select * from user where username  in (&quot;jn1&quot;,&quot;jn2&quot;);
-</code></pre>
-<p>并且关系</p>
-<pre><code>select *  from customer1 where id &gt; 10 and level&lt;15;
-</code></pre>
-<p>或者关系</p>
-<p>如果你要查询的记录过滤条件是多个， <code>只要满足其中一个条件即可</code> ，就使用 or 关键字连接多个 过滤条件</p>
-<p>比如，我们 要查询 id &gt; 10 <code>或</code> 等级 level值 小于 15的用户。就可以这样</p>
-<pre><code class="sql">select *  from customer1 where id &gt; 10 or level&lt;15;
-</code></pre>
-<h3 id="修改表记录"><a href="#修改表记录" class="headerlink" title="修改表记录"></a>修改表记录</h3><p>我们经常需要更新表记录信息，比如一个用户更新了他的头像，消费后余额更新等等。</p>
-<p>MySQL更新记录使用的是 <code>update</code> 语句。</p>
-<p>假如已有customer1 表，如果我们要更新其中用户名为 cus16 这条记录，把coin值设置为 100，就可以这样写</p>
-<pre><code class="sql">update customer1 set coin=100 where username=&#39;cus16&#39;;
-</code></pre>
-<p>注意， 这里也用到了 where 从句，限制了更新的 只是 username为cus16的这些记录。</p>
-<p>如果没有where 从句，像这样</p>
-<pre><code class="sql">update customer1 set coin=100;
-</code></pre>
-<p>就会更新该表中所有的记录，把所有的记录的coin 全部设置为 100</p>
-<h3 id="删除表记录"><a href="#删除表记录" class="headerlink" title="删除表记录"></a>删除表记录</h3><p>我们有时也需要删除表记录。</p>
-<p>MySQL删除记录使用的是 <code>delete from</code> 语句。</p>
-<p>前面我们曾经创建过customer1 表，如果我们要删除其中cus16这条记录，可以这样写</p>
-<pre><code class="sql">delete from customer1  where username=&#39;cus16&#39;;
-</code></pre>
-<p>注意， 这里也用到了where 从句，限制了 删除的 只是 username为cus16的这些记录。</p>
-<p>否则，如果没有where 从句，像这样</p>
-<pre><code class="sql">delete from customer1;
-</code></pre>
-<p>就会删除该表中所有的记录。</p>
-<h1 id="读取数据库表内容"><a href="#读取数据库表内容" class="headerlink" title="读取数据库表内容"></a>读取数据库表内容</h1><p>我们来看下面这样的一个读取数据库表的例子。</p>
-<pre><code class="py">import MySQLdb
-
-# 创建一个 Connection 对象，代表了一个数据库连接
-connection = MySQLdb.connect(
-                host=&quot;192.168.0.100&quot;,# 数据库IP地址  
-                user=&quot;username&quot;,     #  mysql用户名
-                passwd=&quot;xxxxx&quot;,      # mysql用户登录密码
-                db=&quot;dbname&quot; ,        # 数据库名
-                # 如果数据库里面的文本是utf8编码的，
-                #charset指定是utf8
-                charset = &quot;utf8&quot;)   
-
-# 返回一个 Cursor对象
-c = connection.cursor()
-
-# 执行一个获取 users 表中所有记录的 sql 语句
-c.execute(&quot;&quot;&quot;SELECT * FROM users &quot;&quot;&quot;)
-
-
-# rowcount属性记录了最近一次 execute 方法获取的数据行数
-numrows = c.rowcount
-
-for x in range(numrows):
-    # fetchone 方法返回的是一个元组，
-    # 代表获取的一行记录，元组里面每个元素代表一个字段
-    row = c.fetchone()
-    print(row)
-</code></pre>
-<p>我们可以发现，对数据库的操作是 <code>通过SQL语句</code> 进行的。</p>
-<p>我们的代码需要先创建一个 Connection 对象 ， 然后再通过Connection 对象创建一个Cursor 对象。</p>
-<p>最后使用Cursor对象的execute方法，传入要数据库服务执行的SQL语句。</p>
-<p>调用execute执行完SQL语句后，cursor 对象的 fetchone 方法是获取一行记录。</p>
-<p>fetchone 方法返回的是一个元组，代表获取的一行记录，元组里面每个元素代表一个字段。</p>
-<p>上面的代码通过一个for循环，可以依次获取到数据库的记录行。</p>
-<p>我们还可以用 fetchmany 方法来获取多行记录，该方法的参数就是要获取记录的条数，比如</p>
-<pre><code class="py"># 执行一个获取 users 表中所有记录的 sql 语句
-c.execute(&quot;&quot;&quot;SELECT * FROM users &quot;&quot;&quot;)
-
-# fetchmany方法返回的是一个元组，
-# 里面每个元素也是元组，代表一行记录
-rows = c.fetchmany(2)
-print(rows)
-</code></pre>
-<p>我们还可以用 fetchall 方法来获取所有记录，比如</p>
-<pre><code class="py"># 执行一个获取 users 表中所有记录的 sql 语句
-c.execute(&quot;&quot;&quot;SELECT * FROM users &quot;&quot;&quot;)
-
-# fetchall方法返回的是一个元组，
-# 里面每个元素也是元组，代表一行记录
-rows = c.fetchall()
-print(rows)
-</code></pre>
-<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h2 id="为什么需要事务机制"><a href="#为什么需要事务机制" class="headerlink" title="为什么需要事务机制"></a>为什么需要事务机制</h2><p>我们设计了一个图书馆系统，可以管理图书借阅信息。</p>
-<p>已经有用户表user、图书表book 和 借阅登记表borrow。</p>
-<p>如下所示：</p>
-<pre><code class="sql">CREATE TABLE user (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  username varchar(150)  NOT NULL,
-  `password` varchar(128)  NOT NULL,
-  realname varchar(30)  NOT NULL
-) ;
-
-
-CREATE TABLE book (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name varchar(150)  NOT NULL,
-  `desc` varchar(128)  NOT NULL,
-  status int  NOT NULL
-) ;
-
-
-CREATE TABLE borrow (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id      int  NOT NULL,
-  book_id  int  NOT NULL,
-  
-  FOREIGN KEY (user_id)
-   REFERENCES user(id)
-   ON UPDATE CASCADE
-   ON DELETE RESTRICT,
-
-  
-  FOREIGN KEY (book_id)
-   REFERENCES book(id)
-   ON UPDATE CASCADE
-   ON DELETE RESTRICT
-) ;
-</code></pre>
-<p>其中</p>
-<p>book 表中的status 字段 记录了 某本图书的 状态 值为 0 表示 没有借出， 1 表示借出了。</p>
-<p>借阅登记表 borrow 里面 的user_id就是借阅者id，是一个外键，引用了 user表， 而book_id 也是一个外键，引用了 book表。</p>
-<p>当一个用户（假设id为 666）借阅某本图书（假设id为 888）时，系统要对 <code>两张表</code> 进行操作，</p>
-<ul>
-<li>修改book 表 中 id为 888 的记录中的 status值为1 表示借出</li>
-<li>在 borrow 表中添加一个记录，记录是谁借出了哪本书。</li>
-</ul>
-<p>似乎，这个问题不大，学习了前面的课程，大家可以很轻易的写出如下两段SQL</p>
-<pre><code class="sql">update book set status=1 where id=888;
-
-insert into borrow  (user_id,book_id) VALUES (666,888);
-</code></pre>
-<p>朋友，想想，这里面有什么问题吗？</p>
-<p>我们分析这个业务需求，这两个操作必须一起完成。</p>
-<p>如果出现 第一个SQL操作（修改图书状态）完成了，第二个操作由于某种原因却失败了。 这就会导致数据状态不一致的问题。</p>
-<p>这种事情在 安全性健壮性要求特别高 的金融系统中 是 万万不允许出现的。</p>
-<p>解决这个问题的办法，就是使用数据库服务的 <code>事务(transaction)</code> 机制</p>
-<h2 id="事务-和-autocommit"><a href="#事务-和-autocommit" class="headerlink" title="事务 和 autocommit"></a>事务 和 autocommit</h2><p>对于InnoDB格式的表， 所有的客户端请求 都是在事务中处理的。 每个事务必须提交才能生效。</p>
-<p>MySQL服务对每个客户端连接有个设置开关： <code>autocommit</code> 。</p>
-<ul>
-<li><p>如果值为 1 ，处于自动提交模式</p>
-<p>执行 <code>每条</code> SQL语句，都是自动放入一个事务中，执行完该语句后， <code>自动提交</code> 事务</p>
+<li><p>如果未指定命令行参数，则从 testpath（如果已配置）或当前目录开始收集。</p>
+<p>如果命令行参数， 指定了 目录、文件名 或 node id 的任何组合，则按参数来找</p>
 </li>
-<li><p>如果值为 0 ，处于手动提交模式</p>
-<p>手动提交模式打开后，自动创建一个事务； 执行一条SQL语句后， <code>不会自动提交</code> 事务，接着等待执行后续的SQL语句。</p>
-<p>所有已经执行的SQL语句的结果，都是临时保存在缓冲区 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size">innodb_log_buffer</a> 中，外部看不到这些改动</p>
-<p>如果接收执行了一条 <code>COMMIT</code> 语句，就把前面所有的更新从缓冲区写入磁盘生效， 并且自动开始下一个事务。这时，外部客户端可以看见更新生效了。</p>
-<p>如果接收执行了一条 <code>ROLLBACK</code> 语句，就把前面所有缓冲的更新删除， 并且自动开始下一个事务。这时，外部客户端发现数据库状态几乎和操作前一样，没有更新。（除了一些 AUTO_INCREMENT字段 的当前自增值 可能发生了改变）</p>
+<li><p>寻找过程会递归到目录中，除非它们匹配上 norecursedirs。</p>
+</li>
+<li><p>文件 ： <code>test_*.py</code> 或 <code>*_test.py</code> 。</p>
+</li>
+<li><p>测试项：</p>
+<ul>
+<li>test为前缀 的 <code>函数</code></li>
+<li>Test为前缀的  <code>类</code>   里面的  test 为前缀的方法</li>
+</ul>
 </li>
 </ul>
-<p>当 MySQL 客户端连接到服务端，缺省 <code>autocommit</code> 值就是1，表示自动提交。 这就是为什么我们在 <code>MySQL命令行客户端</code> 执行每条SQL语句都不需要执行 COMMIT，就可以生效的原因。</p>
-<p>如果，我们想取消自动提交模式，执行 如下命令即可</p>
-<pre><code class="SQL">SET autocommit = 0;
+<h2 id="初始化清除"><a href="#初始化清除" class="headerlink" title="初始化清除"></a>初始化清除</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bV41167a4?p=2">点击这里，边看视频讲解，边学习以下内容</a></p>
+<p>对自动化测试框架来说，初始化清除功能 至关重要。</p>
+<h3 id="模块级别"><a href="#模块级别" class="headerlink" title="模块级别"></a>模块级别</h3><p><code>模块级别</code> 的初始化、清除 分别 在整个模块的测试用例 执行前后执行，并且 <code>只会执行1次</code> 。</p>
+<p>如下定义 setup_module 和 teardown_module 全局函数</p>
+<pre><code class="py">def setup_module():
+    print(&#39;\n *** 初始化-模块 ***&#39;)
+
+
+def teardown_module():
+    print(&#39;\n ***   清除-模块 ***&#39;)
+
+class Test_错误密码:
+
+    def test_C001001(self):
+        print(&#39;\n用例C001001&#39;)
+        assert 1 == 1
+        
+    def test_C001002(self):
+        print(&#39;\n用例C001002&#39;)
+        assert 2 == 2
+        
+    def test_C001003(self):
+        print(&#39;\n用例C001003&#39;)
+        assert 3 == 2
+
+
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+        
+    def test_C001022(self):
+        print(&#39;\n用例C001022&#39;)
+        assert 2 == 2
 </code></pre>
-<p>而前面我们学习过的python mysql 客户端库 mysqlclient 创建连接后，该库底层就自动执行了 上面的命令，取消了自动提交模式。 这就是为什么，我们执行完每个 改动数据库的操作 都要commit 一下的原因。</p>
-<p>更多关于 autocommit的信息，<a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-autocommit-commit-rollback.html">点击这里参考官方文档</a></p>
-<p>如果，一个客户端连接 当前是 <strong>自动提交模式（autocommit为1）</strong>，根据前面的描述，我们知道 每条SQL语句执行 都是自动放入一个事务中，自动提交了。</p>
-<p>如果，我们想 把 <code>多条SQL语句</code> 放入 <code>同一个事务</code> 中，可以这样：</p>
-<pre><code class="sql">-- 1. 创建一个 多条SQL语句 事务
-START TRANSACTION;
+<p>执行命令 <code>pytest cases -s</code> ，运行结果如下</p>
+<pre><code>collected 5 items
 
--- 2. 更新book 表
-update book set status=1 where id=888;
+cases\登录\test_错误登录.py
+ *** 初始化-模块 ***
 
--- 3. 更新 borrow表
-insert into borrow  (user_id,book_id) VALUES (666,888);
-
--- 4. 提交事务 
-COMMIT;
--- 或者回滚事务
-ROLLBACK;
+用例C001001
+.
+用例C001002
+.
+用例C001003
+F
+用例C001021
+.
+用例C001022
+.
+ ***   清除-模块 ***
 </code></pre>
-<p>如果在执行完第3步，没有错误，更新borrow表成功了， 整个事务里面的操作都没有问题， 我们可以选择执行 语句 <code>COMMIT</code> 来提交事务，这样第2步，和第3步的更新操作才会真正成功。</p>
-<p>如果在执行完第3步，更新borrow表失败了， 我们的程序可以选择执行 <code>ROLLBACK</code> 来回滚事务，这样第2步的更新操作也会撤销。</p>
-<p>如果，一个客户端连接 当前是 <strong>手动提交模式（autocommit为0）</strong>，</p>
-<p>多条SQL语句自动放入事务中，如下所示：</p>
-<pre><code class="sql">-- 开始自动处于一个事务中，无需执行  START TRANSACTION;
-
--- 1. 更新book 表
-update book set status=1 where id=888;
-
--- 2. 更新 borrow表
-insert into borrow  (user_id,book_id) VALUES (666,888);
-
--- 3. 提交事务 ，并且自动启动下一个事务
-COMMIT;
--- 或者回滚事务 ，并且自动启动下一个事务
-ROLLBACK;
+<p>可以发现，模块级别的初始化、清除 在 整个模块所有用例 执行前后 分别 <code>执行1次</code></p>
+<p>它主要是用来为该 <code>模块</code> 中 所有的测试用例做 <code>公共的</code> 初始化 和 清除</p>
+<h3 id="类级别"><a href="#类级别" class="headerlink" title="类级别"></a>类级别</h3><pre><code>类级别` 的初始化、清除 分别 在整个类的测试用例 执行前后执行，并且 `只会执行1次
 </code></pre>
-<p>可以发现自动提交模式 和手动提交模式 的区别在于 手动提交模式，开始不需要我们执行 <code>START TRANSACTION;</code> 显式的创建一个事务</p>
-<p>通常我们开发程序操作数据库，建议使用手动提交模式， 这样如果一批操作中途出现问题时，可以很方便的回复数据库到最初的数据状态。</p>
-<h2 id="四种类型的-SQL-语句"><a href="#四种类型的-SQL-语句" class="headerlink" title="四种类型的 SQL 语句"></a>四种类型的 SQL 语句</h2><p>SQL 包括四种类型的语句：</p>
-<p>DDL（Data Definition Language）数据定义语言，它处理 数据库和表的结构定义，比如 CREATE，DROP，ALTER等。</p>
-<p>DML（Data Manipulation Language）数据操作语言，它处理具体的数据内容，包括最常见的SQL语句，如SELECT，INSERT，UPDATE，DELETE等，它用于存储，修改，检索，删除和更新数据库中的数据。</p>
-<p>DCL（Data Control Language）数据控制语言，包括GRANT等命令，主要涉及数据库系统的权限等控制。</p>
-<p>TCL（Transaction Control Language）是事务控制语言的简称，包括BEGIN Transaction、COMMIT Transaction、ROLLBACK Transaction等命令，主要涉及数据库系统的权限，权限和其他控制。</p>
+<p>如下定义 setup_class 和 teardown_class 类方法</p>
+<pre><code class="py">def setup_module():
+    print(&#39;\n *** 初始化-模块 ***&#39;)
+
+def teardown_module():
+    print(&#39;\n ***   清除-模块 ***&#39;)
+
+class Test_错误密码:
+
+    @classmethod
+    def setup_class(cls):
+        print(&#39;\n === 初始化-类 ===&#39;)
+
+    @classmethod
+    def teardown_class(cls):
+        print(&#39;\n === 清除 - 类 ===&#39;)
+        
+    def test_C001001(self):
+        print(&#39;\n用例C001001&#39;)
+        assert 1 == 1
+        
+    def test_C001002(self):
+        print(&#39;\n用例C001002&#39;)
+        assert 2 == 2
+        
+    def test_C001003(self):
+        print(&#39;\n用例C001003&#39;)
+        assert 3 == 2
+
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+        
+    def test_C001022(self):
+        print(&#39;\n用例C001022&#39;)
+        assert 2 == 2
+</code></pre>
+<p>执行命令 <code>pytest cases -s</code> ，运行结果如下</p>
+<pre><code>collected 5 items
+
+cases\登录\test_错误登录.py
+ *** 初始化-模块 ***
+
+ === 初始化-类 ===
+
+用例C001001
+.
+用例C001002
+.
+用例C001003
+F
+ === 清除 - 类 ===
+
+用例C001021
+.
+用例C001022
+.
+ ***   清除-模块 ***
+</code></pre>
+<p>可以发现，类级别的初始化、清除 在 整个模块所有用例 执行前后 分别 <code>执行1次</code> 。</p>
+<p>它主要是用来为该 <code>类</code> 中的所有测试用例做 <code>公共的</code> 初始化 和 清除</p>
+<h3 id="方法级别"><a href="#方法级别" class="headerlink" title="方法级别"></a>方法级别</h3><p>方法级别 的初始化、清除 分别 在类的 每个测试方法 执行前后执行，并且 <code>每个用例分别执行1次</code></p>
+<p>如下定义 setup_method 和 teardown_method 实例方法</p>
+<pre><code class="py">def setup_module():
+    print(&#39;\n *** 初始化-模块 ***&#39;)
+
+def teardown_module():
+    print(&#39;\n ***   清除-模块 ***&#39;)
+
+class Test_错误密码:
+
+    @classmethod
+    def setup_class(cls):
+        print(&#39;\n === 初始化-类 ===&#39;)
+
+    @classmethod
+    def teardown_class(cls):
+        print(&#39;\n === 清除 - 类 ===&#39;)
+        
+    def setup_method(self):
+        print(&#39;\n --- 初始化-方法  ---&#39;)
+
+    def teardown_method(self):
+        print(&#39;\n --- 清除  -方法 ---&#39;)
+        
+    def test_C001001(self):
+        print(&#39;\n用例C001001&#39;)
+        assert 1 == 1
+        
+    def test_C001002(self):
+        print(&#39;\n用例C001002&#39;)
+        assert 2 == 2
+        
+    def test_C001003(self):
+        print(&#39;\n用例C001003&#39;)
+        assert 3 == 2
+
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+        
+    def test_C001022(self):
+        print(&#39;\n用例C001022&#39;)
+        assert 2 == 2
+</code></pre>
+<p>执行命令 <code>pytest cases -s</code> ，运行结果如下</p>
+<pre><code>collected 5 items
+
+cases\登录\test_错误登录.py
+ *** 初始化-模块 ***
+
+ === 初始化-类 ===
+
+ --- 初始化-方法  ---
+
+用例C001001
+.
+ --- 清除  -方法 ---
+
+ --- 初始化-方法  ---
+
+用例C001002
+.
+ --- 清除  -方法 ---
+
+ --- 初始化-方法  ---
+
+用例C001003
+F
+ --- 清除  -方法 ---
+
+ === 清除 - 类 ===
+
+用例C001021
+.
+用例C001022
+.
+ ***   清除-模块 ***
+</code></pre>
+<p>可以发现，方法别的初始化、清除 在 整个模块所有用例 执行前后 分别 <code>执行一次</code></p>
+<h3 id="目录级别"><a href="#目录级别" class="headerlink" title="目录级别"></a>目录级别</h3><p>目标级别的 初始化清除，就是针对整个目录执行的初始化、清除。</p>
+<p>我们在需要初始化的目录下面创建 一个名为 <code>conftest.py</code> 的文件，里面内容如下所示</p>
+<pre><code class="py">import pytest 
+
+@pytest.fixture(scope=&#39;package&#39;,autouse=True)
+def st_emptyEnv():
+    print(f&#39;\n#### 初始化-目录甲&#39;)
+    yield
+    
+    print(f&#39;\n#### 清除-目录甲&#39;)
+</code></pre>
+<p>注意：这里清除环境的代码就是 yield 之后的代码。 这是一个生成器，具体的说明参见视频讲解。</p>
+<p>我们可以在多个目录下面放置这样的文件，定义该目录的初始化清除。</p>
+<p>pytest 在执行测试时，会层层调用。</p>
+<p>但是我发现了pytest一个重要的bug： 清除操作并不一定会在该目录最后一个测试用例执行完进行调用。</p>
+<p>在我看来，这个问题是非常大的。</p>
+<p>因为，一个目录下的用例执行完后，该清除的数据没有清除，这可能会导致其他目录下的用例执行失败。</p>
+<p>所以在这个问题解决前，白月黑羽推荐大家先不要使用这种 目录级别 的初始化清除。</p>
+<h2 id="数据驱动"><a href="#数据驱动" class="headerlink" title="数据驱动"></a>数据驱动</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bV41167a4?p=5">点击这里，边看视频讲解，边学习以下内容</a></p>
+<p>用例 <code>UI-0001</code> 到 <code>UI-0005</code> 这5个登录的测试用例，共同的特点是，它们测试步骤是一模一样的，只是输入的数据（用户名、密码）不同，要检查的输出数据（错误提示）不同。</p>
+<p>这批测试用例，就是典型的 可以用 <code>数据驱动</code> 方式进行自动化的用例。</p>
+<p>如果有一批测试用例，具有 <code>相同的测试步骤</code> ，只是 <code>测试参数数据不同</code> 。</p>
+<p>自动化测试时，把测试数据从用例代码中 <code>分离</code> 开来，以后增加新的测试用例，只需要修改数据。</p>
+<p>这就是数据驱动。</p>
+<p>这种情况可以使用 pytest 用例 的 数据驱动格式，只需如下定义即可</p>
+<pre><code class="py">class Test_错误登录:
+    @pytest.mark.parametrize(&#39;username, password, expectedalert&#39;, [
+        (None, &#39;88888888&#39;, &#39;请输入用户名&#39;),
+        (&#39;byhy&#39;, None, &#39;请输入密码&#39;),
+        (&#39;byh&#39;, &#39;88888888&#39;, &#39;登录失败 : 用户名或者密码错误&#39;),
+        (&#39;byhy&#39;, &#39;8888888&#39;, &#39;登录失败 : 用户名或者密码错误&#39;),
+        (&#39;byhy&#39;, &#39;888888888&#39;, &#39;登录失败 : 用户名或者密码错误&#39;),
+    ]
+                             )
+    def test_UI_0001_0005(self, username, password, expectedalert):
+        alertText = loginAndCheck(username, password)
+        assert alertText == expectedalert
+</code></pre>
+<p>这样，我们就不需要定义那么多的测试用例方法了， 而且测试数据也可以集中存放。</p>
+<p>更多细节，<a target="_blank" rel="noopener" href="https://docs.pytest.org/en/latest/parametrize.html">参考pytest官方文档</a></p>
+<h2 id="挑选用例执行"><a href="#挑选用例执行" class="headerlink" title="挑选用例执行"></a>挑选用例执行</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bV41167a4?p=3">点击这里，边看视频讲解，边学习以下内容</a></p>
+<p>pytest 可以灵活的挑选测试用例执行</p>
+<h3 id="指定一个模块"><a href="#指定一个模块" class="headerlink" title="指定一个模块"></a>指定一个模块</h3><p>可以像这样只挑选一个模块执行</p>
+<pre><code>pytest cases\登录\test_错误登录.py
+</code></pre>
+<h3 id="指定目录"><a href="#指定目录" class="headerlink" title="指定目录"></a>指定目录</h3><p>可以像这样只挑选一个目录执行</p>
+<pre><code class="py">pytest cases
+</code></pre>
+<p>也可以指定多个目录</p>
+<pre><code>pytest cases1  cases2\登录
+</code></pre>
+<h3 id="指定模块里面的函数或者类"><a href="#指定模块里面的函数或者类" class="headerlink" title="指定模块里面的函数或者类"></a>指定模块里面的函数或者类</h3><p>指定一个类</p>
+<pre><code>pytest cases\登录\test_错误登录.py::Test_错误密码
+</code></pre>
+<p>也可以指定类里面的方法</p>
+<pre><code>pytest cases\登录\test_错误登录.py::Test_错误密码::test_C001001
+</code></pre>
+<h3 id="根据名字"><a href="#根据名字" class="headerlink" title="根据名字"></a>根据名字</h3><p>可以使用 命令行参数 -k 后面加名字来挑选要执行的测试项</p>
+<p>比如像这样后面跟测试函数名字的一部分：</p>
+<pre><code>pytest -k C001001 -s
+</code></pre>
+<p>注意，-k 后面的名字</p>
+<ul>
+<li><p>可以是测试函数的名字，可以是类的名字，可以是模块文件名，可以是目录的名字</p>
+</li>
+<li><p>是大小写敏感的</p>
+</li>
+<li><p>不一定要完整，只要能有部分匹配上就行</p>
+</li>
+<li><p>可以用 not 表示选择名字中不包含，比如</p>
+<pre><code>pytest -k &quot;not C001001&quot; -s
+</code></pre>
+</li>
+<li><p>可以用 and 表示选择名字同时包含多个关键字，比如</p>
+<pre><code>pytest -k &quot;错 and 密码2&quot; -s
+</code></pre>
+</li>
+<li><p>可以用 or 表示选择名字 包含指定关键字之一即可，比如</p>
+<pre><code>pytest -k &quot;错 or 密码2&quot; -s
+</code></pre>
+</li>
+</ul>
+<h3 id="根据标签"><a href="#根据标签" class="headerlink" title="根据标签"></a>根据标签</h3><p><a target="_blank" rel="noopener" href="https://docs.pytest.org/en/latest/example/markers.html">参考官方文档</a></p>
+<p>可以这样给 某个方法加上标签 webtest</p>
+<pre><code class="py">import pytest
+
+class Test_错误密码2:
+
+    @pytest.mark.webtest
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+</code></pre>
+<p>然后，可以这样运行指定标签的用例</p>
+<pre><code>pytest cases -m webtest -s
+</code></pre>
+<p>也可以这样给整个类加上标签</p>
+<pre><code class="py">@pytest.mark.webtest
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+</code></pre>
+<p>当然标签也支持中文</p>
+<pre><code class="py">@pytest.mark.网页测试
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+</code></pre>
+<p>然后，运行命令行指定标签</p>
+<pre><code>pytest cases -m 网页测试 -s
+</code></pre>
+<p>可以这样同时添加多个标签</p>
+<pre><code class="py">@pytest.mark.网页测试
+@pytest.mark.登录测试
+class Test_错误密码2:
+
+    def test_C001021(self):
+        print(&#39;\n用例C001021&#39;)
+        assert 1 == 1
+</code></pre>
+<p>可以这样定义一个全局变量 pytestmark 为 <code>整个模块文件</code> 设定标签</p>
+<pre><code class="py">import pytest
+pytestmark = pytest.mark.网页测试
+</code></pre>
+<p>如果你需要定义多个标签，可以定义一个列表</p>
+<pre><code class="py">import pytest
+pytestmark = [pytest.mark.网页测试, pytest.mark.登录测试]
+</code></pre>
+<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>执行测试非常简单，打开命令行窗口，进入自动化项目根目录（我们这里就是 autotest），执行命令程序 <code>pytest</code> 即可</p>
+<p>上面的示例执行结果如下</p>
+<p><img src="http://cdn1.python3.vip/imgs/api/tut_20200626162633_92.png" alt="image"></p>
+<p>显示找到3个测试项，2个执行通过，1个不通过。</p>
+<p>通过的用例 是用一个绿色小点表示， 不通过的用例用一个红色的F表示</p>
+<p>并且会在后面显示具体不通过的用例 和不通过的检查点 代码细节。</p>
+<p>大家可以发现，用例代码中有些打印语句没有显示出内容。</p>
+<p>因为pytest 会 截获print打印的内容。</p>
+<p>如果我们希望 显示测试代码中print的内容，因为这些打印语句在调试代码时很有用，可以加上命令行参数 -s</p>
+<p>如下</p>
+<pre><code>pytest -s
+</code></pre>
+<p>如果我们希望得到更详细的执行信息，包括每个测试类、测试函数的名字，可以加上参数 -v，这个参数可以和 -s 合并为 -sv</p>
+<p>如下</p>
+<pre><code>pytest -sv
+</code></pre>
+<p>执行 pytest 时， 如果命令行没有指定目标目录 或者 文件， 它会自动搜索当前目录下所有符合条件的文件、类、函数。</p>
+<p>所以上面，就找到了3个测试方法，对应3个用例。</p>
+<p>我们目前 项目根目录 中 只有一个cases 目录用例存放测试用例， 将来还会有其他目录，比如：</p>
+<p>lib目录存放库代码、cfg目录存放配置数据 等等。</p>
+<p>为了防止 pytest 到其他目录中找测试用例项，执行测试时，我们可以在命令行加上目标目录 cases ，就是这样</p>
+<pre><code class="py">pytest cases
+</code></pre>
+<h2 id="产生报告"><a href="#产生报告" class="headerlink" title="产生报告"></a>产生报告</h2><p>前面在安装pytest，我们也安装了 pytest-html 插件，这个插件就是用来产生测试报告的。</p>
+<p>要产生报告，在命令行加上 参数 <code>--html=report.html --self-contained-html</code> ，如下</p>
+<pre><code class="py">pytest cases --html=report.html --self-contained-html
+</code></pre>
+<p>这样就会产生名为 report.html 的测试报告文件，可以在浏览器中打开</p>
+<p>但是这个工具有个bug，导致测试目录、文件、类名 中，如果有中文，显示为乱码</p>
+<p>可以这样修复：</p>
+<ul>
+<li><p>打开该插件对应的代码文件，通常在解释器目录下：site-packages\pytest_html\plugin.py</p>
+</li>
+<li><p>找到如下代码</p>
+<pre><code class="py">  class TestResult:
+      def __init__(self, outcome, report, logfile, config):
+          self.test_id = report.nodeid.encode(&quot;utf-8&quot;).decode(&quot;unicode_escape&quot;)
+</code></pre>
+<p>改为</p>
+<pre><code class="py">  class TestResult:
+      def __init__(self, outcome, report, logfile, config):
+          # 白月黑羽修改方法，解决乱码问题
+          # self.test_id = report.nodeid.encode(&quot;utf-8&quot;).decode(&quot;unicode_escape&quot;)
+          self.test_id = report.nodeid
+</code></pre>
+</li>
+</ul>
+<p>然后再次运行，就可以发现中文乱码问题已经解决了。</p>
 
                 
             </div>
@@ -874,7 +899,7 @@ ROLLBACK;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jnan-qq.github.io/2021/0126undefined.html">https://jnan-qq.github.io/2021/0126undefined.html</a>
+                    <a href="https://jnan-qq.github.io/2021/0506undefined.html">https://jnan-qq.github.io/2021/0506undefined.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -912,8 +937,8 @@ ROLLBACK;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/mysql/">
-                                    <span class="chip bg-color">mysql</span>
+                                <a href="/tags/pytezh/">
+                                    <span class="chip bg-color">pytezh</span>
                                 </a>
                             
                         </div>
@@ -1089,13 +1114,13 @@ ROLLBACK;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/0506undefined.html">
+                <a href="/2021/0508undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Pytest">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="UnitTest">
                         
-                        <span class="card-title">Pytest</span>
+                        <span class="card-title">UnitTest</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1106,7 +1131,7 @@ ROLLBACK;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
                         </span>
                         <span class="publish-author">
                             
@@ -1119,8 +1144,8 @@ ROLLBACK;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/pytezh/">
-                        <span class="chip bg-color">pytezh</span>
+                    <a href="/tags/unittest/">
+                        <span class="chip bg-color">unittest</span>
                     </a>
                     
                 </div>
@@ -1134,13 +1159,13 @@ ROLLBACK;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/0125undefined.html">
+                <a href="/2021/0126undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Mysql 安装">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Mysql应用">
                         
-                        <span class="card-title">Mysql 安装</span>
+                        <span class="card-title">Mysql应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1151,7 +1176,7 @@ ROLLBACK;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
                             </span>
                         <span class="publish-author">
                             
