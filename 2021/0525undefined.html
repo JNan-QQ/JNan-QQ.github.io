@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试流程, Jnblog">
+    <meta name="keywords" content="公司, Jnblog">
     <meta name="description" content="也许你错过了上一站的美好，才遇见了下一站的惊喜。面对复杂，保持欢喜。加油，别让人生输给心情">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试流程 | Jnblog</title>
+    <title>公司 | Jnblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,7 +310,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '66c311a2205b825a65033d0a55daf8a4810353cfbf805adc87b9469645c0768b';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试流程</h1>
+                    <h1 class="description center-align post-title">公司</h1>
                 </div>
             </div>
         </div>
@@ -442,13 +442,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                <span class="chip bg-color">面试</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-11
+                    2021-05-25
                 </div>
                 
 
@@ -481,104 +477,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>面试官你好！我叫姜楠，今年23岁，本科毕业。</p>
-<p>熟悉软件测试流程，有自己的一套编写覆盖率较高的 测试用例 的方法；熟悉 Python 语言、熟悉基于 Selenium 的Web自动化、基于requests的API 接口自动化；熟练使用自动化测试框架hytest，开发测试自动化系统；</p>
-<p>能够快速的学习、运用所学知识进行实践；有较强的自学能力和分析解决问题能力，能胜任高强度工作；待人处事自信成熟，工作认真负责，追求长期的职业目标，希望在本职工作领域取得良好的发展。</p>
-<h2 id="技术交流"><a href="#技术交流" class="headerlink" title="技术交流"></a>技术交流</h2><ol>
-<li><p>测试流程</p>
-<p><img src="/medias/myimg/cslc.png"></p>
+                <ol>
+<li><p>听说科技</p>
 </li>
-<li><p>编写 测试用例 的方法</p>
-<ol>
-<li><p>搜集、整理需求</p>
+<li><p>中软国际                       <del>FAIL</del></p>
 </li>
-<li><p>编写测试用例</p>
-<p>需求整理好以后，采用什么方法才能写出比较完善的测试用例呢？</p>
-<p>网上流传的编写测试用例方法有很多，我们总结最重要的就是</p>
-<ul>
-<li>根据测试需求建立用例分类</li>
-<li>边界值法</li>
-<li>错误猜测法</li>
-<li>因素/场景组合法</li>
-</ul>
+<li><p>软通动力                       <del>FAIL</del></p>
 </li>
-<li><p>建立用例分类</p>
-<p>很好理解，就是根据前面 整理的测试需求 对应写出测试功能点分类</p>
+<li><p>江苏云泰鑫科技</p>
 </li>
-</ol>
-</li>
-<li><p>Selenium介绍</p>
-<p>Selenium 的自动化原理是这样的</p>
-<p><img src="http://cdn1.python3.vip/imgs/api/tut_20200504110845_36.png"></p>
-<p>Selenium本质是一个<code>服务进程</code>，通过<code>HTTP协议</code>在程序与浏览器中间传递 命令</p>
-<ol>
-<li>自动化程序调用Selenium 客户端库函数（比如点击按钮元素）</li>
-<li>客户端库会发送Selenium 命令 给浏览器的驱动程序</li>
-<li>浏览器驱动程序接收到命令后 ,驱动浏览器去执行命令</li>
-<li>浏览器执行命令</li>
-<li>浏览器驱动程序获取命令执行的结果，返回给我们自动化程序</li>
-<li>自动化程序对返回结果进行处理</li>
-</ol>
-</li>
-<li><p>hytest</p>
-<p><code>优点</code>：</p>
-<ul>
-<li><p>上手非常简单</p>
-<p>hytest 让大家直接用 Python 来写测试用例。</p>
-<p>如果你有 Python编程经验，1小时就可以上手，1天就可以灵活使用。</p>
-</li>
-<li><p>操作直观易懂</p>
-<p>测试用例以 目录文件结构存放，清晰明了</p>
-<p><code>初始化清除</code> 机制清晰灵活</p>
-<p>可以灵活地 <strong>挑选</strong> 要执行的测试用例</p>
-</li>
-<li><p>漂亮的测试报告</p>
-</li>
-</ul>
-<p><code>pytest</code>:</p>
-<p>​                目录级别用例清除，不一按是在目录结束清除</p>
-<p>robotframework:</p>
-<ol>
-<li><p>最大的缺点就是：反人类的 <code>测试用例语法</code></p>
-</li>
-<li><p>特别是处理稍微复杂点的任务，比如循环、判断、字典里面包含列表这种 复杂些的数据结构， 用 RobotFramework 可以说是太痛苦了。而且，调试 RF用例 也 非常的麻烦。</p>
-</li>
-<li><p>黑羽robot 在 RobotFramework 基础上，增强了什么？</p>
-<ul>
-<li><p>拨乱反正，直接用 Python 来写测试用例。</p>
-<p>饱受RF语法折磨的人，会发现再也不需要学习RF奇葩的语法了，一切都是Python。只要你有Python语言基础，一切都是那么的轻松自然。</p>
-</li>
-<li><p>汉化了 测试报告，对中国用户友好一些</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>​                </p>
-</li>
-<li><p>Linux</p>
-<p><a target="_blank" rel="noopener" href="http://v3.byhy.net/tut/others/linux/01/">Linux 简介和安装 | 白月黑羽实战班 (byhy.net)</a></p>
-</li>
-<li><p>MySQL数据库常用操作，子查询与多表链接查询</p>
-<p><a target="_blank" rel="noopener" href="http://v3.byhy.net/tut/others/mysql/05/#%E5%AD%90%E6%9F%A5%E8%AF%A2">查询、修改、删除表记录 | 白月黑羽实战班 (byhy.net)</a></p>
-</li>
-<li><p>图形界面</p>
-<p><a target="_blank" rel="noopener" href="http://v3.byhy.net/tut/py/gui/qt_01/">Python Qt 简介 | 白月黑羽实战班 (byhy.net)</a></p>
-</li>
-<li><p>问题跟踪系统</p>
-</li>
-<li><p>软件测试方法包括：白盒测试(White Box Testing)(逻辑实现)、黑盒测试(Black Box Testing)(功能结果)、灰盒测试、静态测试、动态测试。</p>
-</li>
-</ol>
-<h2 id="薪资"><a href="#薪资" class="headerlink" title="薪资"></a>薪资</h2><p>5天8小时</p>
-<p>5000</p>
-<p>五险一金</p>
-<h2 id="问问题"><a href="#问问题" class="headerlink" title="问问题"></a>问问题</h2><ol>
-<li><p>产品相关</p>
-</li>
-<li><p>公司相关</p>
-</li>
-<li><p>福利待遇</p>
-</li>
+<li></li>
 </ol>
 
                 
@@ -606,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.jiangnan.press/2021/0511undefined.html">http://www.jiangnan.press/2021/0511undefined.html</a>
+                    <a href="http://www.jiangnan.press/2021/0525undefined.html">http://www.jiangnan.press/2021/0525undefined.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,11 +551,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                    <span class="chip bg-color">面试</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -822,13 +726,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/0511undefined.html">
+                <a href="/2021/0525undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="面试流程">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="公司">
                         
-                        <span class="card-title">面试流程</span>
+                        <span class="card-title">公司</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -839,7 +743,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
                             </span>
                         <span class="publish-author">
                             
@@ -850,14 +754,6 @@
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
