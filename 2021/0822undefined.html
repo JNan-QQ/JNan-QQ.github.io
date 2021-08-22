@@ -481,10 +481,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、Python"><a href="#一、Python" class="headerlink" title="一、Python"></a>一、Python</h1><h2 id="1-Python安装"><a href="#1-Python安装" class="headerlink" title="1.Python安装"></a>1.Python安装</h2><h3 id="Python-版本"><a href="#Python-版本" class="headerlink" title="Python 版本"></a>Python 版本</h3><p>截止本文更新日期 2021年8月22日，Python 最新的版本已经到了 3.10 。</p>
+                <h2 id="一、Python"><a href="#一、Python" class="headerlink" title="一、Python"></a>一、Python</h2><h3 id="1-Python安装"><a href="#1-Python安装" class="headerlink" title="1.Python安装"></a>1.Python安装</h3><h4 id="Python-版本"><a href="#Python-版本" class="headerlink" title="Python 版本"></a>Python 版本</h4><p>截止本文更新日期 2021年8月22日，Python 最新的版本已经到了 3.10 。</p>
 <p>但是3.9~3.10版本刚推出不久，可能会有兼容性问题，而且3.9不支持 Window 7</p>
 <p>所以目前，推荐大家安装使用 Python3.8 。</p>
-<h3 id="Python解释器"><a href="#Python解释器" class="headerlink" title="Python解释器"></a>Python解释器</h3><p>我们编写程序代码，就是要 <code>让计算机 按照我们的想法 去做事</code> 。</p>
+<h4 id="Python解释器"><a href="#Python解释器" class="headerlink" title="Python解释器"></a>Python解释器</h4><p>我们编写程序代码，就是要 <code>让计算机 按照我们的想法 去做事</code> 。</p>
 <p>程序代码是用编程语言编写的，而Python语言， 是计算机硬件（主要是CPU）听不懂的语言。</p>
 <p>计算机CPU只能听懂 机器指令。</p>
 <p>所以，我们需要一个翻译， 把Python语言翻译成 计算机CPU能听懂的机器指令。</p>
@@ -497,7 +497,7 @@
 <p>所以 <strong>学习Python的第一步</strong> 就是： <code>安装Python解释器</code> 。</p>
 <p>安装Python解释器，首先要看你的电脑运行的什么操作系统。</p>
 <p>我们这里主要介绍 <code>Windows</code> 上如何安装 Python解释器。</p>
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>Windows 下安装 Python3.7 解释器有几个注意点：</p>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><p>Windows 下安装 Python3.7 解释器有几个注意点：</p>
 <ul>
 <li><p>Windows 7 系统 <code>一定要安装 Service Pack 1 补丁包</code> ，才能安装Python3.6 以后的版本</p>
 <p>怎么知道你的 Windows 7 是否安装了 Service Pack 1？</p>
@@ -530,7 +530,7 @@
 <p>注意：安装目录不要使用缺省的 <code>C:\Program Files\</code> ，这些是系统目录，可能会为以后的操作带来权限问题。</p>
 <p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059429-06031b80-cbef-11e9-9a28-da7fa98fa1be.png" alt="image"></p>
 <p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059454-98a3ba80-cbef-11e9-811b-1dbdd8379f6b.png" alt="image"></p>
-<h2 id="2-Python环境变量配置"><a href="#2-Python环境变量配置" class="headerlink" title="2.Python环境变量配置"></a>2.Python环境变量配置</h2><h3 id="环境变量path"><a href="#环境变量path" class="headerlink" title="环境变量path"></a>环境变量path</h3><p>前面 安装的时候，我们强调要勾选 <code>Add Python3.7 to path</code> ，这是什么意思呢？</p>
+<h3 id="2-Python环境变量配置"><a href="#2-Python环境变量配置" class="headerlink" title="2.Python环境变量配置"></a>2.Python环境变量配置</h3><h4 id="环境变量path"><a href="#环境变量path" class="headerlink" title="环境变量path"></a>环境变量path</h4><p>前面 安装的时候，我们强调要勾选 <code>Add Python3.7 to path</code> ，这是什么意思呢？</p>
 <p>就是把 <code>Python解释器所在的目录</code> 加入到 <code>环境变量Path</code> 中。</p>
 <p>Windows 下，我们可以用 <code>echo %path%</code> 命令查看一下环境变量path的内容是什么。</p>
 <p>比如，我的电脑执行结果如下</p>
@@ -560,7 +560,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\
 <p>注意，在 C:\Python38\ 和 C:\Python27\ 这两个目录里面 都有python.exe，会执行哪个呢？</p>
 <p><code>哪个目录在前面</code> ，就去执行哪个目录下面的python.exe。</p>
 <p>比如现在是 C:\Python38\ 在前面，就先执行 C:\Python38\ 里面的 python.exe。</p>
-<h3 id="自行添加修改环境变量"><a href="#自行添加修改环境变量" class="headerlink" title="自行添加修改环境变量"></a>自行添加修改环境变量</h3><p>如果安装时未勾选Add Python3.7 to path，还可以打开电脑环境变量界面，将python安装目录与python包目录添加到PATH中。（系统变量与用户变量任选其一添加）</p>
+<h4 id="自行添加修改环境变量"><a href="#自行添加修改环境变量" class="headerlink" title="自行添加修改环境变量"></a>自行添加修改环境变量</h4><p>如果安装时未勾选Add Python3.7 to path，还可以打开电脑环境变量界面，将python安装目录与python包目录添加到PATH中。（系统变量与用户变量任选其一添加）</p>
 <p><img src="/medias/myimg/image/env/environ_1.png" alt="img"> </p>
 <p>接着点击 新建（一定是新建），如我的python3.8.8安装路径如下图</p>
 <p><img src="/medias/myimg/image/env/environ_2.png" alt="img"> </p>
@@ -573,7 +573,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\
 <p>（2）输入 python</p>
 <p>（3）出现如下界面，环境配置成功</p>
 <p><img src="/medias/myimg/image/env/environ_5.png" alt="img"></p>
-<h2 id="3-Python包管理器pip"><a href="#3-Python包管理器pip" class="headerlink" title="3.Python包管理器pip"></a>3.Python包管理器pip</h2><p>Python 包文件都托管在第三方pip平台，安装起来非常方便。</p>
+<h3 id="3-Python包管理器pip"><a href="#3-Python包管理器pip" class="headerlink" title="3.Python包管理器pip"></a>3.Python包管理器pip</h3><p>Python 包文件都托管在第三方pip平台，安装起来非常方便。</p>
 <p>①安装单个包 例如：安装自动化测试框架 【hytest】</p>
 <p>在CMD命令行输入 pip install hytest 即可（如下图）</p>
 <p><img src="/medias/myimg/image/env/environ_6.png" alt="img"> </p>
@@ -584,7 +584,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\
 <p>PS：如果安装失败，可能是pip包管理器版本太低，可以先升级一下pip。</p>
 <p>命令行窗口 执行命令 python -m pip install –upgrade pip 如下图</p>
 <p><img src="/medias/myimg/image/env/environ_8.png" alt="img"> </p>
-<h2 id="4-自动化测试-浏览器驱动配置"><a href="#4-自动化测试-浏览器驱动配置" class="headerlink" title="4.自动化测试_浏览器驱动配置"></a>4.自动化测试_浏览器驱动配置</h2><p>在浏览器设置里查看浏览器版本</p>
+<h3 id="4-自动化测试-浏览器驱动配置"><a href="#4-自动化测试-浏览器驱动配置" class="headerlink" title="4.自动化测试_浏览器驱动配置"></a>4.自动化测试_浏览器驱动配置</h3><p>在浏览器设置里查看浏览器版本</p>
 <p><img src="/medias/myimg/image/env/environ_9.png" alt="img"> </p>
 <p>下载对应版本的浏览器驱动（ <a target="_blank" rel="noopener" href="https://www.chromium.org/">Chromium</a>内核的浏览器都可以用谷歌浏览器的驱动，edge例外）</p>
 <p>① Chrome：<a target="_blank" rel="noopener" href="https://liushilive.github.io/github_selenium_drivers/md/Chrome.html">https://liushilive.github.io/github_selenium_drivers/md/Chrome.html</a></p>
