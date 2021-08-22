@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HyRobot, Jnblog">
+    <meta name="keywords" content="Environment_config, Jnblog">
     <meta name="description" content="也许你错过了上一站的美好，才遇见了下一站的惊喜。面对复杂，保持欢喜。加油，别让人生输给心情">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HyRobot | Jnblog</title>
+    <title>Environment_config | Jnblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HyRobot</h1>
+                    <h1 class="description center-align post-title">Environment_config</h1>
                 </div>
             </div>
         </div>
@@ -444,8 +444,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/RobotFramework-hyrobot/">
-                                <span class="chip bg-color">RobotFramework hyrobot</span>
+                            <a href="/tags/env/">
+                                <span class="chip bg-color">env</span>
                             </a>
                         
                     </div>
@@ -460,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-10
+                    2021-08-22
                 </div>
                 
 
@@ -481,429 +481,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="安装-黑羽robot"><a href="#安装-黑羽robot" class="headerlink" title="安装 黑羽robot"></a>安装 黑羽robot</h2><p>首先确保你电脑上安装好了 Python <code>3.7 或者 3.8</code> 版本的解释器</p>
-<h3 id="安装RF"><a href="#安装RF" class="headerlink" title="安装RF"></a>安装RF</h3><p>黑羽robot基于Robot Framework ，所以必须先安装RobotFramework</p>
-<p>直接执行如下Pip命令即可：</p>
-<pre><code>pip install robotframework 
-</code></pre>
-<h3 id="安装黑羽robot"><a href="#安装黑羽robot" class="headerlink" title="安装黑羽robot"></a>安装黑羽robot</h3><p><a target="_blank" rel="noopener" href="http://cdn1.python3.vip/files/hyrobot/autotest_hyrobot.zip">点击这里下载黑羽robot项目包</a></p>
-<p>解压下载的zip包，会产生一个名为 <code>autotest_hyrobot</code> 的目录， 这就是hyrobot的自动化项目目录。</p>
-<p>你修改该目录的名字，比如我们要讲解 自动化测试 <code>白月SMS系统</code> ， 就可以改名为 <code>autotest_bysms</code></p>
-<p>建议：用PyCharm 等IDE直接打开项目文件夹，一定要 确保 <code>hyrobot</code> 目录 <strong>在项目根目录下面</strong>，如下</p>
-<p><img src="http://cdn1.python3.vip/imgs/api/tut_20200831095914_20.png" alt="image"></p>
-<h2 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h2><p>黑羽robot 项目目录中包含</p>
+                <h1 id="一、Python"><a href="#一、Python" class="headerlink" title="一、Python"></a>一、Python</h1><h2 id="1-Python安装"><a href="#1-Python安装" class="headerlink" title="1.Python安装"></a>1.Python安装</h2><h3 id="Python-版本"><a href="#Python-版本" class="headerlink" title="Python 版本"></a>Python 版本</h3><p>截止本文更新日期 2021年8月22日，Python 最新的版本已经到了 3.10 。</p>
+<p>但是3.9~3.10版本刚推出不久，可能会有兼容性问题，而且3.9不支持 Window 7</p>
+<p>所以目前，推荐大家安装使用 Python3.8 。</p>
+<h3 id="Python解释器"><a href="#Python解释器" class="headerlink" title="Python解释器"></a>Python解释器</h3><p>我们编写程序代码，就是要 <code>让计算机 按照我们的想法 去做事</code> 。</p>
+<p>程序代码是用编程语言编写的，而Python语言， 是计算机硬件（主要是CPU）听不懂的语言。</p>
+<p>计算机CPU只能听懂 机器指令。</p>
+<p>所以，我们需要一个翻译， 把Python语言翻译成 计算机CPU能听懂的机器指令。</p>
+<p>这个翻译就是 <code>Python解释器</code> 。</p>
+<p>我们运行Python程序，就是 运行Python解释器，让解释器去读取我们写好的Python代码文件，并且把Python代码翻译成 机器指令 给 CPU 去执行。</p>
+<p>这个原理如下图所示：</p>
+<p><img src="http://cdn1.python3.vip/imgs/interpreter.png" alt="白月黑羽Python3教程"></p>
+<p>Python解释器本身也是个程序， 它是解释执行 Python代码的，所以叫解释器。</p>
+<p>没有Python解释器，我们的Python代码是没有办法运行的。</p>
+<p>所以 <strong>学习Python的第一步</strong> 就是： <code>安装Python解释器</code> 。</p>
+<p>安装Python解释器，首先要看你的电脑运行的什么操作系统。</p>
+<p>我们这里主要介绍 <code>Windows</code> 上如何安装 Python解释器。</p>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>Windows 下安装 Python3.7 解释器有几个注意点：</p>
 <ul>
-<li><p>cases 目录</p>
-<p>里面存放 自动化测试用例代码</p>
+<li><p>Windows 7 系统 <code>一定要安装 Service Pack 1 补丁包</code> ，才能安装Python3.6 以后的版本</p>
+<p>怎么知道你的 Windows 7 是否安装了 Service Pack 1？</p>
+<p>查看电脑属性，看看是否有下图 所示的 Service Pack 1。</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36462795_40351411-e9e2a008-5dde-11e8-82a7-713a1a1d49b6.png" alt="白月黑羽Python3教程"></p>
+<p>如果没有，你的电脑必须先安装Service Pack 1。</p>
+<p>具体安装步骤，请参考<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/help/15090/windows-7-install-service-pack-1-sp1">这篇文章</a></p>
+<p>如果安装过程中，提示 “api-ms-win-crt-runtime-l1-1-0.dll 丢失”，这是Win7 补丁包导致的错误请点击<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=49984">这里</a>下载安装补丁包。</p>
+<p>注意：Windows 7 上不能运行最新的 Python 3.9</p>
 </li>
-<li><p>cfg 目录</p>
-<p>里面存放 配置文件</p>
-</li>
-<li><p>hyrobot 目录</p>
-<p>里面存放 hyrobot库 和 工具 代码， 开发者不需要 修改里面的内容</p>
-</li>
-<li><p>lib 目录</p>
-<p>里面存放 自动化测试用例 使用的 库</p>
-</li>
-<li><p>run.bat</p>
-<p>Windows下 运行 黑羽robot， 执行自动化测试 的 脚本</p>
-</li>
-<li><p>run.sh</p>
-<p>苹果 MacOS 下 运行 黑羽robot， 执行自动化测试 的 脚本</p>
-<p>注意：</p>
-<p>苹果用户，需要先执行 <code>chmod +x run.sh</code> 增加执行权限</p>
-<p>运行测试时，执行 <code>./run.sh</code> 命令</p>
+<li><p>Windows 8 和 Windows 10 就简单了，不需要什么准备工作。</p>
 </li>
 </ul>
-<h2 id="用例文件的编写、执行、产生日志报告"><a href="#用例文件的编写、执行、产生日志报告" class="headerlink" title="用例文件的编写、执行、产生日志报告"></a>用例文件的编写、执行、产生日志报告</h2><h3 id="编写用例"><a href="#编写用例" class="headerlink" title="编写用例"></a>编写用例</h3><p>用例文件格式如下：</p>
-<p>文件里面每个类对应一个用例。</p>
-<p>类的 <code>name</code> 属性 指定 用例名</p>
-<p>类的 <code>teststeps</code> 方法 里面的代码 就是 测试步骤</p>
-<p><code>特别注意</code> ： 用例类名 <code>一定要保证唯一</code> ，推荐包含用例编号。比如</p>
-<pre><code class="py"># 类名保证唯一，推荐包含用例编号
-class UI_0101:
-    # 测试用例名字
-    name = &#39;管理员首页 - UI-0101&#39;
-
-    # 测试用例步骤
-    def teststeps(self):
-</code></pre>
-<p>代码最前面加上</p>
-<pre><code class="py">from hyrobot.common import *
-</code></pre>
-<p>导入 hyrobot 库，库里面有一些函数 和</p>
-<p>声明每个步骤使用 STEP 库函数</p>
-<p>打印信息用 INFO 库函数</p>
-<p>检查点用 CHECK_POINT 函数。</p>
-<h3 id="执行用例"><a href="#执行用例" class="headerlink" title="执行用例"></a>执行用例</h3><p>执行用例需要</p>
+<h4 id="Python解释器安装"><a href="#Python解释器安装" class="headerlink" title="Python解释器安装"></a>Python解释器安装</h4><p>现在Windows7还广泛使用，而 Python 3.9 以后的版本不支持 Windows 7。</p>
+<p>为了支持更多的用户，我们这里提供 Python 3.8 解释器下载。</p>
+<p>大家点击下面的链接，即可下载 ：</p>
 <ul>
-<li>打开命令行窗口</li>
-<li>进入到自动化项目根目</li>
-<li>运行 run.bat</li>
+<li><a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.8.8/python-3.8.8-amd64.exe">Python3.8解释器-64位</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.8.8/python-3.8.8.exe">Python3.8解释器-32位</a></li>
 </ul>
-<h3 id="日志和报告"><a href="#日志和报告" class="headerlink" title="日志和报告"></a>日志和报告</h3><p>执行完后，就会产生 汉化的 日志 和 报告。</p>
-<h2 id="数据驱动用例"><a href="#数据驱动用例" class="headerlink" title="数据驱动用例"></a>数据驱动用例</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Uf4y1y78x">点击这里，边看视频讲解，边学习以下内容</a></p>
-<p>做过自动化测试的朋友经常听说过 <code>数据驱动</code> （或者面试的时候被问到过）。</p>
-<p>什么是数据驱动？</p>
-<p>如果有一批测试用例，具有 <code>相同的测试步骤</code> ，只是 <code>测试参数数据不同</code> 。</p>
-<p>自动化测试时，把测试数据从用例代码中 <code>分离</code> 开来，以后增加新的测试用例，只需要修改数据。</p>
-<p>这就是数据驱动。</p>
-<p>举个例子：</p>
-<p>某系统 登录功能的测试，有一批测试用例，其执行的步骤几乎都是一样的，只是使用的测试参数不同。</p>
-<p>比如：</p>
-<ul>
-<li>不输入用户名，输入正确密码</li>
-<li>输入比正确用户名后面少一个字符，输入正确密码</li>
-<li>输入比正确用户名后面多一个字符，输入正确密码</li>
-<li>输入比正确用户名前面少一个字符，输入正确密码</li>
-<li>输入比正确用户名前面多一个字符，输入正确密码</li>
-<li>输入正确用户名，不输入密码</li>
-<li>输入正确用户名，输入比正确密码后面多一个字符</li>
-</ul>
-<p>上面每种输入对应一个用例， 聪明的读者应该能想到 可以把整个测试逻辑封装到一个库函数中，如下所示</p>
-<pre><code class="py">def login(username,password):
-   # 下面写登录流程
+<p>如果您电脑的 Windows 是64位的，推荐安装64位解释器。</p>
+<p>如果是 32位的，只能安装 32位解释器</p>
+<p>下载成功后，双击安装程序，开始安装。</p>
+<pre><code>注意` 安装到这一步的时候，一定要勾选 `Add Python 3.7 to path` 选项， 然后再点击 `Customize installation
 </code></pre>
-<p>但是，测试用例仍然需要定义一个个的类，如下, (假设正确的用户名为 user，密码为 123456)</p>
-<pre><code class="py">class c00101:
-    name = &#39;登录测试 - c00101&#39; 
-
-    def teststeps(self):
-      msg = login(&#39;&#39;,&#39;123456&#39;)
-      CHECK_POINT(msg, &#39;错误的用户名密码&#39;)
-
-
-class c00102:
-    name = &#39;登录测试 - c00102&#39; 
-
-    def teststeps(self):
-      msg = login(&#39;use&#39;,&#39;123456&#39;)
-      CHECK_POINT(msg, &#39;错误的用户名密码&#39;)
-
-# 下面还有类似的用例定义      
+<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059386-1ff02e80-cbee-11e9-9698-3177eb78ffac.png" alt="白月黑羽Python3教程"></p>
+<p>在下图这一步时，点击 Next 即可</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059392-529a2700-cbee-11e9-9a20-c03dfc242129.png" alt="image"></p>
+<p>在下图这一步时，按图示步骤操作。随后，等待安装完成。</p>
+<p>注意：安装目录不要使用缺省的 <code>C:\Program Files\</code> ，这些是系统目录，可能会为以后的操作带来权限问题。</p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059429-06031b80-cbef-11e9-9a28-da7fa98fa1be.png" alt="image"></p>
+<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64059454-98a3ba80-cbef-11e9-811b-1dbdd8379f6b.png" alt="image"></p>
+<h2 id="2-Python环境变量配置"><a href="#2-Python环境变量配置" class="headerlink" title="2.Python环境变量配置"></a>2.Python环境变量配置</h2><h3 id="环境变量path"><a href="#环境变量path" class="headerlink" title="环境变量path"></a>环境变量path</h3><p>前面 安装的时候，我们强调要勾选 <code>Add Python3.7 to path</code> ，这是什么意思呢？</p>
+<p>就是把 <code>Python解释器所在的目录</code> 加入到 <code>环境变量Path</code> 中。</p>
+<p>Windows 下，我们可以用 <code>echo %path%</code> 命令查看一下环境变量path的内容是什么。</p>
+<p>比如，我的电脑执行结果如下</p>
+<pre><code>C:\Users\byhy&gt;echo %path%
+C:\Python38\Scripts\;C:\Python38\;
+C:\Python27\Scripts\;C:\Python27\;
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
+C:\Windows\System32\WindowsPowerShell\v1.0\
 </code></pre>
-<p>这样做，当然可以，就是有些麻烦了。</p>
-<p>这种情况可以使用 HyRobot用例 的 数据驱动格式，只需如下定义即可</p>
-<pre><code class="py">class c_login_x:
-    # cases里面每个元组定义每个用例的数据
-    # 第一个数据是用例名称， 后面的数据是用例参数
-    cases = [
-        (&#39;登录 - c00101&#39;, &#39;&#39;,&#39;123456&#39;),
-        (&#39;登录 - c00102&#39;, &#39;use&#39;,&#39;123456&#39;),
-        (&#39;登录 - c00103&#39;, &#39;user1&#39;,&#39;123456&#39;),
-    ]
-
-    def teststeps(self, para_index):
-        # 取出参数
-        username, password = self.cases[para_index][1:]
-        # 下面写登录流程
+<p>环境变量 Path 中包含的 这些目录， 就是 <code>Windows查找程序的目录</code></p>
+<p>环境变量 Path 的内容包括了多个目录，目录之间用分号隔开。</p>
+<p>假如你编写了一段代码，保存到名为 code.py 的文件中， 当我们敲入下面的命令时，</p>
+<pre><code>python code.py
 </code></pre>
-<p>这样，我们就不需要定义那么多的测试用例类了， 而且测试数据也可以集中存放。</p>
-<p>视频讲解中的被测系统白月SMS如何安装，看课后练习部分说明</p>
-<p>视频讲解中的 测试用例代码如下</p>
-<pre><code class="py">from hyrobot.common import  *
-from selenium import webdriver
-import time
-
-class c_login_x:
-    cases = [
-        (&#39;登录 - c00101&#39;, &#39;byhy1&#39;,&#39;888888&#39;),
-        (&#39;登录 - c00102&#39;, &#39;byh&#39;,&#39;888888&#39;),
-        (&#39;登录 - c00103&#39;, &#39;&#39;,&#39;888888&#39;),
-    ]
-
-    def teststeps(self, para_index):
-        # 取出参数
-        username, password = self.cases[para_index][1:]
-        # 下面写登录流程
-
-        driver = webdriver.Chrome()
-        driver.implicitly_wait(10)
-
-        driver.get(&#39;http://127.0.0.1/mgr/sign.html&#39;)
-
-        driver.find_element_by_id(&#39;username&#39;).send_keys(username)
-        driver.find_element_by_id(&#39;password&#39;).send_keys(password)
-        driver.find_element_by_css_selector(&#39;button[type=&quot;submit&quot;]&#39;).click()
-
-        time.sleep(2)
-        alterText = driver.switch_to.alert.text
-        print(alterText)
-        CHECK_POINT(&#39;弹出提示&#39;, alterText == &#39;登录失败 : 用户名或者密码错误&#39;)
-
-
-        driver.quit()
+<p>Windows 命令执行器 就会 <strong>依次</strong> 搜索如下目录：</p>
+<pre><code>C:\Python38\Scripts\;
+C:\Python38\;
+C:\Python27\Scripts\;
+C:\Python27\;
+C:\Windows\system32;
+C:\Windows;
+C:\Windows\System32\Wbem;
+C:\Windows\System32\WindowsPowerShell\v1.0\
 </code></pre>
-<h2 id="初始化、清除、共享数据"><a href="#初始化、清除、共享数据" class="headerlink" title="初始化、清除、共享数据"></a>初始化、清除、共享数据</h2><p>原则是：</p>
-<p><code>谁</code> 做的 <code>初始化</code> 操作对环境产生了 <code>什么改变</code> ， <code>谁</code> 就应该在 <code>清除</code> 操作里面做什么样的 <code>还原</code> 。</p>
-<p>自己拉的屎，自己擦屁股，不要让别人帮你擦，而且还要擦干净。</p>
-<p>黑羽robot的初始化/清除（和robotframework一样）支持 <code>3种方式</code></p>
-<ul>
-<li>单个用例的初始化、清除</li>
-<li>整个用例文件的初始化、清除</li>
-<li>整个用例目录的初始化、清除</li>
-</ul>
-<h3 id="单个用例的初始化、清除"><a href="#单个用例的初始化、清除" class="headerlink" title="单个用例的初始化、清除"></a>单个用例的初始化、清除</h3><p>首先看第一种：</p>
-<p>单个用例的初始化、清除 是在 用例对应的类里面添加setup、teardown 方法</p>
-<pre><code class="py">class c0101:
-    name = &#39;管理员首页 - UI-0101&#39;
-
-    # 初始化方法
-    def setup(self):
-        wd = open_browser()
-        mgr_login(wd)
-
-    #清除方法
-    def teardown(self):
-        wd = get_global_webdriver()
-        wd.quit()
-
-    # 测试用例步骤
-    def teststeps(self):
-        # 获取webdriver对象 对应 已经登录好的浏览器
-        wd = get_global_webdriver()
-
-        STEP(1, &#39;获取左侧菜单信息&#39;)
-</code></pre>
-<p>然后修改 库文件 webui.py ，如下</p>
-<pre><code class="py">def open_browser():
-
-    print(&#39;打开浏览器&#39;)
-    wd = webdriver.Chrome()
-    wd.implicitly_wait(5)
-
-    # 使用黑羽robot 全局存储对象 GSTORE
-    GSTORE[&#39;global_webdriver&#39;] = wd
-    return wd
-
-# 获取 全局使用的 webdriver 对象
-def get_global_webdriver():
-    return GSTORE[&#39;global_webdriver&#39;]
-</code></pre>
-<p>注意： 我们在创建 WebDriver 对象后，把它存到了 黑羽robot 全局存储对象 GSTORE 中。 方便其他的代码 获取。</p>
-<p>黑羽robot执行用例时</p>
-<ul>
-<li>先执行 setup 里面的代码</li>
-<li>再执行 teststeps 里面的代码</li>
-<li>最后再执行 teardown 里面的代码。</li>
-</ul>
-<p>而且</p>
-<p>如果 setup 执行失败（有 异常）， 就不会再执行 teststeps 和 teardown 里面的代码了。</p>
-<p>如果 teststeps 执行失败， 仍然会执行 teardown ， 确保环境被 清除</p>
-<h3 id="用例文件的初始化、清除"><a href="#用例文件的初始化、清除" class="headerlink" title="用例文件的初始化、清除"></a>用例文件的初始化、清除</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av67586688/?p=10">点击这里，边看视频讲解，边学习以下内容</a></p>
-<p>精明的读者肯定已经发现，上面这种单个用例的初始化、清除，并没有解决我们前面说的 多个用例共享 数据环境的问题。</p>
-<p>这时，我们可以使用 <code>整个用例文件的初始化、清除</code></p>
-<p>整个 用例文件 的初始化、清除 是在 文件中 添加全局函数 suite_setup、suite_teardown</p>
-<p>如下所示</p>
-<pre><code class="py">from hyrobot.common import *
-from lib.webui import  *
-from time import sleep
-
-def suite_setup():
-    INFO(&#39;suite_setup&#39;)
-    wd = open_browser()
-    mgr_login(wd)
-
-def suite_teardown():
-    INFO(&#39;suite_teardown&#39;)
-    wd = get_global_webdriver()
-    wd.quit()
-
-class c0101:
-    # 测试用例名字
-    name = &#39;管理员首页 - UI-0101&#39;
-
-    # 测试用例步骤
-    def teststeps(self):
-
-        wd = get_global_webdriver()
-
-        STEP(1, &#39;获取左侧菜单信息&#39;)
-
-        # 先找到上层节点，缩小查找范围
-        sidebarMenu = wd.find_element_by_class_name(&#39;sidebar-menu&#39;)
-
-        # 再找到内部元素
-        elements = sidebarMenu.find_elements_by_tag_name(&#39;span&#39;)
-
-        menuTitles = []
-        for ele in elements:
-            INFO(ele.text)
-            menuTitles.append(ele.text)
-
-
-        STEP(2, &#39;检查是否正确&#39;)
-
-        CHECK_POINT(&quot;侧边栏菜单是否正确&quot;,
-                    menuTitles[:3] == [&#39;客户&#39;, &#39;药品&#39;, &#39;订单&#39;])
-
-
-class c0102:
-    name = &#39;管理员首页 - UI-0102&#39;
-
-    # 测试用例步骤
-    def teststeps(self):
-
-        wd = get_global_webdriver()
-
-
-        STEP(1, &#39;点击左侧客户菜单&#39;)
-
-        # 先找到上层节点，缩小查找范围
-        sidebarMenu = wd.find_element_by_class_name(&#39;sidebar-menu&#39;)
-
-        # 再找到内部元素
-        elements = sidebarMenu.find_elements_by_tag_name(&#39;span&#39;)
-
-        # 第一个span对应的菜单是 客户，点击它
-        elements[0].click()
-
-        STEP(2, &#39;添加客户&#39;)
-
-        # 点击添加客户按钮
-        wd.find_element_by_class_name(&#39;glyphicon-plus&#39;).click()
-
-        # form-contorl 对应3个输入框
-        inputs = wd.find_element_by_class_name(&#39;add-one-area&#39;) \
-            .find_elements_by_class_name(&#39;form-control&#39;)
-
-        # 输入客户姓名
-        inputs[0].send_keys(&#39;南京中医院&#39;)
-        # 输入联系电话
-        inputs[1].send_keys(&#39;2551867858&#39;)
-        # 输入客户描述
-        inputs[2].send_keys(&#39;江苏省-南京市-秦淮区-汉中路-16栋504&#39;)
-
-        # 第1个 btn-xs 就是创建按钮， 点击创建按钮
-        wd.find_element_by_class_name(&#39;add-one-area&#39;) \
-            .find_element_by_class_name(&#39;btn-xs&#39;) \
-            .click()
-
-        # 等待1秒
-        sleep(1)
-
-
-        STEP(3, &#39;检查添加信息&#39;)
-
-        # 找到 列表最上面的一栏
-        item = wd.find_elements_by_class_name(&#39;search-result-item&#39;)[0]
-
-        fields = item.find_elements_by_tag_name(&#39;span&#39;)[:6]
-
-        texts = [field.text for field in fields]
-        print(texts)
-
-        # 预期内容为
-        expected = [
-            &#39;客户名：&#39;,
-            &#39;南京中医院&#39;,
-            &#39;联系电话：&#39;,
-            &#39;2551867858&#39;,
-            &#39;地址：&#39;,
-            &#39;江苏省-南京市-秦淮区-汉中路-16栋504&#39;
-        ]
-
-        CHECK_POINT(&#39;客户信息和添加内容一致 &#39;,
-                    texts == expected)
-</code></pre>
-<p>如果一个 用例文件 既有 suite_setup、suite_teardown ，用例里面也有 setup、teardown , 执行的顺序如下</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64908999-0942ef00-d739-11e9-8016-6bd8264ee81d.png" alt="image"></p>
-<h3 id="套件目录的初始化、清除"><a href="#套件目录的初始化、清除" class="headerlink" title="套件目录的初始化、清除"></a>套件目录的初始化、清除</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av67586688/?p=11">点击这里，边看视频讲解，边学习以下内容</a></p>
-<p>刚才我们做到了让一个用例文件里面，所有的用例都共享初始化、清除操作。</p>
-<p>如果 多个用例文件里面，的用例都需要相同的初始化清除操作怎么办？ 比如目录结构</p>
-<p>这时，我们可以使用 <code>整个用例文件的初始化、清除</code></p>
-<p>除了登录测试，其他所有的web界面操作都需要 打开浏览器登录，否则也会导致多次打开浏览器。</p>
-<p>可以把打开浏览器的操作设置为 web界面操作目录 共同的初始化</p>
-<p>把其他放到 登录后操作 目录中， 添加登录后操作的 初始化</p>
-<p>那么怎么设置一个目录共同的初始化呢？</p>
-<p>就是 在这个目录下面创建名为 <code>__st__.py</code> 的文件。</p>
-<p>和套件文件一样，套件目录的 的初始化、清除 也是在 文件中 添加全局函数 suite_setup、suite_teardown。</p>
-<p>请大家根据我们的视频 修改用例目录结构，加上 合适的 初始化、清除 代码。</p>
-<p><a target="_blank" rel="noopener" href="http://cdn1.python3.vip/files/hyrobot/autotest_bysms_lesson2.zip">可以点击这里，下载视频中的示例代码</a></p>
-<p>如果 套件目录有 suite_setup、suite_teardown， 用例文件也有 suite_setup、suite_teardown ，用例里面也有 setup、teardown , 执行的顺序如下所示</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64909469-2a0e4300-d73f-11e9-9436-3fd3afa5f841.png" alt="image"></p>
-<h3 id="缺省初始化、清除"><a href="#缺省初始化、清除" class="headerlink" title="缺省初始化、清除"></a>缺省初始化、清除</h3><p>用例文件、和套件目录 除了 可以使用 suite_setup、suite_teardown 对整个目录进行初始化清除，还支持另外一种初始化清除： <code>缺省初识化、清除</code></p>
-<p>就是定义 名称为 <code>test_setup</code> 和 <code>test_teardown</code> 的全局函数。</p>
-<p>如果在 用例文件 中定义了 全局函数 <code>test_setup</code> ，如果 该文件中 <code>有用例本身没有初始化</code> 方法， 执行自动化的时候就会对该用例，使用这个 test_setup 初始化</p>
-<p>如果在 用例文件 中定义了 全局函数 <code>test_teardown</code> ，如果 该文件中 <code>有用例本身没有清除</code> 方法， 执行自动化的时候就会对该用例，使用这个 test_teardown 清除。</p>
-<p>执行自动化测试的时候，往往我们并不需要执行 <code>全部的</code> 测试用例。</p>
-<p>比如：冒烟测试，只需要测试冒烟测试的那些用例。 或者调试自己写的某个用例的自动化，就只需要执行那一个用例。</p>
-<p>黑羽robot 可以灵活的挑选要执行的测试用例。</p>
-<p>黑羽robot是基于 robotframework 的， 挑选用例执行的机制和 robotframework 完全一致</p>
-<h2 id="指定关键测试用例"><a href="#指定关键测试用例" class="headerlink" title="指定关键测试用例"></a>指定关键测试用例</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av67586688/?p=15">点击这里，边看视频讲解，边学习以下内容</a></p>
-<p>黑羽robot 执行时，可以指定用例是否是 <code>关键（critical）</code> 测试用例。</p>
-<p>如果本次测试中有关键测试用例没有通过，整个测试就被视为测试不通过。 即使100个用例中只有1个关键用例没有通过，</p>
-<p>反之，所有关键用例都通过，整个测试就视为通过。 即使100个中有99个非关键用例没有通过，只有1个关键通过。</p>
-<p>黑羽robot 执行测试时，如果没有命令行参数特别指定，每个测试用例都被视为关键测试用例。</p>
-<p>我们可以修改下面的的用例，故意产生错误</p>
-<pre><code class="py">class c1401:
-    name = &#39;订单管理 - UI-1401&#39;
-    tags = &#39;order1&#39;
-
-    def teststeps(self):
-        STEP(1,&#39;添加订单&#39;)
-        STEP(2,&#39;检查结果&#39;)
-        # 故意产生错误
-        raise Exception()
-</code></pre>
-<p>当我们运行 黑羽robot 发现 有用例不通过， 然后再看Report， 发现测试报告底色是红色的。 表示整个测试是失败的。</p>
-<p>因为缺省都是critical， 所以用红色表示测试不通过</p>
-<p>我们可以通过命令参数 <code>--critical</code> 或 <code>--noncritical</code> 后面加 标签名称 来指定哪些用例 是 关键用例 或者 非关键用例。</p>
-<p>比如：</p>
-<pre><code class="py">run --critical first
-</code></pre>
-<p>指定 只有具有 first 标签的用例才是关键用例 其它都不是</p>
-<pre><code class="py">run --noncritical first
-</code></pre>
-<p>指定 具有 first 标签的用例是非关键用例，其他用例都是关键用例。</p>
-<pre><code class="py">run --critical basic*  --critical important*
-</code></pre>
-<p>指定 具有 以 basic 开头 或者 important开头 的标签 的用例都是关键用例，其他用例都不是关键用例。</p>
-<hr>
-<p>如果我们执行时，指定这个用例为非关键用例，如下所示</p>
-<pre><code>run --nocritical order1
-</code></pre>
-<p>然后再看Report， 发现测试报告底色是绿色的。因为这个用例都变成非关键用例了，即使失败，也认为测试结果是通过的。</p>
-<h2 id="一些特殊参数"><a href="#一些特殊参数" class="headerlink" title="一些特殊参数"></a>一些特殊参数</h2><ul>
-<li><p>清除所有robot用例文件</p>
-<p>使用参数 <code>run.bat --delrf</code> 删除已经存在的 robotframework格式的用例，不执行测试</p>
-</li>
-<li><p>只转化Python用例为robotframework格式用例</p>
-<p>使用参数 <code>run.bat --torf</code> 只执行转化Python用例为RF用例，不执行转化好的RF测试用例</p>
-</li>
-<li><p>只运行测试</p>
-<p>使用参数 <code>run.bat --runrf</code> 直接执行已经存在的robotframework用例，不执行转化Python用例为RF用例操作</p>
-</li>
-<li><p>只汉化测试报告</p>
-<p>使用参数 <code>run.bat --hanrf</code> 只执行把测试报告汉化的工作，不执行转化和测试</p>
-</li>
-</ul>
-<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av67586688/?p=16">点击这里，边看视频讲解，边学习以下内容</a></p>
-<p>黑羽robot运行后，如果发现 程序出现了问题，怎么去 debug 呢？</p>
-<h3 id="debug-日志级别"><a href="#debug-日志级别" class="headerlink" title="debug 日志级别"></a>debug 日志级别</h3><p>在命令行加上 <code>-L debug</code> 参数，使得日志信息更加详细</p>
-<pre><code class="py">run -L debug
-</code></pre>
-<p>如果有错误，会打印详细的错误信息，方便定位。</p>
-<h3 id="pycharm断点调试"><a href="#pycharm断点调试" class="headerlink" title="pycharm断点调试"></a>pycharm断点调试</h3><p>黑羽robot 运行时，做两件事情</p>
-<ol>
-<li>扫描 Python 格式的测试用例 产生对应的 Robotframework 格式的测试用例</li>
-<li>调用 Robotframework 执行测试用例</li>
-</ol>
-<p>要断点调试，必须先 执行命令 <code>run.bat --torf</code>，把Python 格式的测试用例转化为 Robotframework格式的用例，然后再调试</p>
-<p>黑羽robot 调用 Robotframework 执行测试用例，其实就是 执行类似如下的命令</p>
-<pre><code>python -m robot.run cases
-</code></pre>
-<p>上面意思就是执行robot包里面的run.py文件</p>
-<p>既然本质上就是一个python程序，当然我们可以在pycharm中执行，以前设置断点的方法依然可以使用</p>
-<p>但是我们需要从pycharm里面运行，就需要配置运行参数，点击配置</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_64964534-d3833f00-d8cd-11e9-9bf0-ea0ed6fca9bb.png" alt="image"></p>
-<p>然后，如下图所示，进行配置。注意下图方框里面要点击箭头，从 Script path 改为 Module name</p>
-<p><img src="http://cdn1.python3.vip/imgs/gh/36257654_68577865-de141c00-04ab-11ea-8e8a-a7bb98c183ce.png" alt="image"></p>
-<p>这样设置，执行的时候，就等于执行了下面的命令</p>
-<pre><code>cd E:\tmp\autotest_bysms
-python.exe  -m robot.run  cases
-</code></pre>
-<p>然后再点击debug的图标，就可以进行断点调试了。</p>
+<p>看这些目录中，是否有 python.exe 或者 python.bat 之类的可执行文件。</p>
+<p>如果有就执行他们。</p>
+<p>注意，在 C:\Python38\ 和 C:\Python27\ 这两个目录里面 都有python.exe，会执行哪个呢？</p>
+<p><code>哪个目录在前面</code> ，就去执行哪个目录下面的python.exe。</p>
+<p>比如现在是 C:\Python38\ 在前面，就先执行 C:\Python38\ 里面的 python.exe。</p>
+<h3 id="自行添加修改环境变量"><a href="#自行添加修改环境变量" class="headerlink" title="自行添加修改环境变量"></a>自行添加修改环境变量</h3><p>如果安装时未勾选Add Python3.7 to path，还可以打开电脑环境变量界面，将python安装目录与python包目录添加到PATH中。（系统变量与用户变量任选其一添加）</p>
+<p><img src="image%5Cenv%5Cenviron_1.png" alt="img"> </p>
+<p>接着点击 新建（一定是新建），如我的python3.8.8安装路径如下图</p>
+<p><img src="image%5Cenv%5Cenviron_2.png" alt="img"> </p>
+<p>python3.8.8包文件路径如下图</p>
+<p><img src="image%5Cenv%5Cenviron_3.png" alt="img"> </p>
+<p>那么在环境变量中添加如下图两个目录，然后确定保存。</p>
+<p><img src="image%5Cenv%5Cenviron_4.png" alt="img"> </p>
+<p>2.2 环境变量是否添加成功验证</p>
+<p>（1）打开CMD命令行界面（一定是添加完变量后新打开命令行界面）</p>
+<p>（2）输入 python</p>
+<p>（3）出现如下界面，环境配置成功</p>
+<p><img src="image%5Cenv%5Cenviron_5.png" alt="img"></p>
+<h2 id="3-Python包管理器pip"><a href="#3-Python包管理器pip" class="headerlink" title="3.Python包管理器pip"></a>3.Python包管理器pip</h2><p>Python 包文件都托管在第三方pip平台，安装起来非常方便。</p>
+<p>①安装单个包 例如：安装自动化测试框架 【hytest】</p>
+<p>在CMD命令行输入 pip install hytest 即可（如下图）</p>
+<p><img src="image%5Cenv%5Cenviron_6.png" alt="img"> </p>
+<p>②安装多个包 例如：【C:\Users\Administrator\Desktop\TsWeb\config】目录    下有一个python包配置文件requirements.txt</p>
+<p>打开CMD命令行界面 通过cd命令进入【C:\Users\Administrator\Desktop\Ts    Web\config】目录 或 打开【C:\Users\Administrator\Desktop\TsWeb\config】    在目录下空白处【shift + 鼠标右键】打开powershell 命令行界面。</p>
+<p>在命令行界面输入 pip install -r requirements.txt 命令即可，如下图。</p>
+<p><img src="image%5Cenv%5Cenviron_7.png" alt="img"> </p>
+<p>PS：如果安装失败，可能是pip包管理器版本太低，可以先升级一下pip。</p>
+<p>命令行窗口 执行命令 python -m pip install –upgrade pip 如下图</p>
+<p><img src="image%5Cenv%5Cenviron_8.png" alt="img"> </p>
+<h2 id="4-自动化测试-浏览器驱动配置"><a href="#4-自动化测试-浏览器驱动配置" class="headerlink" title="4.自动化测试_浏览器驱动配置"></a>4.自动化测试_浏览器驱动配置</h2><p>在浏览器设置里查看浏览器版本</p>
+<p><img src="image%5Cenv%5Cenviron_9.png" alt="img"> </p>
+<p>下载对应版本的浏览器驱动（ <a target="_blank" rel="noopener" href="https://www.chromium.org/">Chromium</a>内核的浏览器都可以用谷歌浏览器的驱动，edge例外）</p>
+<p>① Chrome：<a target="_blank" rel="noopener" href="https://liushilive.github.io/github_selenium_drivers/md/Chrome.html">https://liushilive.github.io/github_selenium_drivers/md/Chrome.html</a></p>
+<p>② Edge：<a target="_blank" rel="noopener" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></p>
+<p>③ Firefox：<a target="_blank" rel="noopener" href="https://liushilive.github.io/github_selenium_drivers/md/Firefox.html">https://liushilive.github.io/github_selenium_drivers/md/Firefox.html</a></p>
+<p>例如：我安装谷歌浏览器的驱动</p>
+<p>①查看浏览器版本（设置里）如下图</p>
+<p><img src="image%5Cenv%5Cenviron_10.png" alt="img"> </p>
+<p>浏览器版本为【92.0.4515.159】我们只要关注前三个大版本就行了【92.0.4515】打开谷歌浏览器驱动网页找到以【92.0.4515】开头的驱动下载。</p>
+<p><img src="image%5Cenv%5Cenviron_11.png" alt="img"> </p>
+<p>将浏览器驱动所在文件夹路径加入到环境变量中。如下图。</p>
+<p><img src="image%5Cenv%5Cenviron_12.png" alt="img"> </p>
+<p>PS：建议使用谷歌浏览器，如果有多的相同名称的浏览器驱动可以把驱动改一下名备注（建议使用两个不同的）</p>
+<p>验证：cmd 窗口输入浏览器驱动名称，出现以下界面表示成功。</p>
+<p><img src="image%5Cenv%5Cenviron_13.png" alt="img"></p>
 
                 
             </div>
@@ -930,7 +626,7 @@ python.exe  -m robot.run  cases
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.jiangnan.press/2021/0510undefined.html">http://www.jiangnan.press/2021/0510undefined.html</a>
+                    <a href="http://www.jiangnan.press/2021/0822undefined.html">http://www.jiangnan.press/2021/0822undefined.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -968,8 +664,8 @@ python.exe  -m robot.run  cases
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/RobotFramework-hyrobot/">
-                                    <span class="chip bg-color">RobotFramework hyrobot</span>
+                                <a href="/tags/env/">
+                                    <span class="chip bg-color">env</span>
                                 </a>
                             
                         </div>
@@ -1141,9 +837,10 @@ python.exe  -m robot.run  cases
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/0822undefined.html">
                     <div class="card-image">
@@ -1161,9 +858,9 @@ python.exe  -m robot.run  cases
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1172,6 +869,7 @@ python.exe  -m robot.run  cases
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1190,13 +888,13 @@ python.exe  -m robot.run  cases
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/0508undefined.html">
+                <a href="/2021/0510undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="UnitTest">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="HyRobot">
                         
-                        <span class="card-title">UnitTest</span>
+                        <span class="card-title">HyRobot</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1207,7 +905,7 @@ python.exe  -m robot.run  cases
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
                             </span>
                         <span class="publish-author">
                             
@@ -1220,8 +918,8 @@ python.exe  -m robot.run  cases
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/unittest/">
-                        <span class="chip bg-color">unittest</span>
+                    <a href="/tags/RobotFramework-hyrobot/">
+                        <span class="chip bg-color">RobotFramework hyrobot</span>
                     </a>
                     
                 </div>
